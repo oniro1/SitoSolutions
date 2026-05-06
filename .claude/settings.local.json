@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.framer.com)",
+      "WebFetch(domain:www.landingfolio.com)",
+      "WebFetch(domain:unbounce.com)",
+      "WebFetch(domain:smmagency.framer.website)",
+      "WebFetch(domain:www.getcone.io)",
+      "WebFetch(domain:www.wpromote.com)"
+    ]
+  }
+}
