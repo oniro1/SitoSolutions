@@ -1,0 +1,88 @@
+:root {
+  /* ════════════════════════════════════════════════
+     Claude Brand Palette
+     Orange  #D97757  (logo primary)
+     Rust    #B85C35  (logo shadow / depth)
+     Cream   #FAF8F4  (logo light fill)
+     Warm greys — all slightly orange-tinted
+  ════════════════════════════════════════════════ */
+
+  /* ─── Dark backgrounds (warm near-black) ─── */
+  --bg:        #181210;
+  --s1:        #201812;
+  --s2:        #261D16;
+  --s3:        #2E231B;
+  --s4:        #382B21;
+
+  /* ─── Claude orange — logo primary ─── */
+  --orange:      #D97757;
+  --orange-lt:   #E8977A;
+  --orange-dk:   #B85C35;
+  --orange-40:   rgba(217,119,87,0.40);
+  --orange-20:   rgba(217,119,87,0.20);
+  --orange-12:   rgba(217,119,87,0.12);
+  --orange-08:   rgba(217,119,87,0.08);
+  --orange-04:   rgba(217,119,87,0.04);
+
+  /* ─── Rust — logo shadow tone ─── */
+  --rust:        #B85C35;
+  --rust-20:     rgba(184,92,53,0.20);
+
+  /* trust = orange (used everywhere as primary accent) */
+  --trust:     #D97757;
+  --trust-20:  rgba(217,119,87,0.20);
+  --trust-12:  rgba(217,119,87,0.12);
+  --trust-08:  rgba(217,119,87,0.08);
+
+  /* alias */
+  --gold:      #D97757;
+  --gold-lt:   #E8977A;
+  --gold-dk:   #B85C35;
+  --gold-40:   rgba(217,119,87,0.40);
+  --gold-20:   rgba(217,119,87,0.20);
+  --gold-12:   rgba(217,119,87,0.12);
+  --gold-08:   rgba(217,119,87,0.08);
+  --gold-04:   rgba(217,119,87,0.04);
+
+  /* ─── Text — warm grey scale ─── */
+  --text:      #EDE6DE;
+  --text-2:    #C4B5A5;
+  --text-3:    #8A7060;
+  --white:     #FAF8F4;
+
+  /* ─── Light / cream surfaces ─── */
+  --light:     #FFFFFF;
+  --light-1:   #FAF8F4;   /* warm cream — matches logo cream fill */
+  --light-2:   #F2EDE5;
+  --on-light:  #181210;
+  --on-light-2:#3A2D22;
+  --on-light-3:#7A6355;
+
+  --green:     #43B883;
+  --red:       #D46A5E;
+
+  /* ─── Typography ─── */
+  --f-serif:  'Cormorant Garamond', Georgia, serif;
+  --f-sans:   'Inter', system-ui, sans-serif;
+  --f-mono:   'JetBrains Mono', 'Fira Code', monospace;
+
+  /* ─── Spacing ─── */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  24px;
+  --sp-6:  32px;
+  --sp-7:  48px;
+  --sp-8:  64px;
+  --sp-9:  80px;
+  --sp-10: 96px;
+  --sp-11: 128px;
+
+  /* ─── Misc ─── */
+  --radius-sm: 0px;
+  --radius:    0px;
+  --nav-h:     68px;
+  --max-w:     1160px;
+  --section-pad: 120px 5%;
+}
