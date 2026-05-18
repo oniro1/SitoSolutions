@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Chi siamo — Cerroni Solutions. Sistema strutturato di acquisizione clienti per professionisti e attività high-ticket.">
+<title>About Us — Cerroni Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --orange:#D97757;--orange-lt:#E8977A;--orange-dk:#B85C35;
+  --black:#FAFAF8;--dark:#F2EDE6;--dark-2:#FFFFFF;--dark-3:#FAF8F4;
+  --white:#1C1410;--silver-light:#2D2018;--silver:#5A4A40;
+  --green:#1E9E5A;--red:#C0392B;
+  --radius:2px;
+  --o10:rgba(217,119,87,.10);--o15:rgba(217,119,87,.15);
+  --o20:rgba(217,119,87,.20);--o40:rgba(217,119,87,.40);
+  --border:rgba(217,119,87,.18);--border-lt:rgba(217,119,87,.10);
+  --ink:rgba(28,20,16,.06);--ink2:rgba(28,20,16,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--silver-light);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;}
+::selection{background:rgba(217,119,87,.20);color:var(--white);}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background:var(--dark);}
+::-webkit-scrollbar-thumb{background:var(--orange-dk);}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(250,250,248,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-lt);transition:border-color .3s,box-shadow .3s;}
+nav.scrolled{border-bottom-color:var(--border);box-shadow:0 2px 24px rgba(28,20,16,.07);}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo img{width:38px;height:38px;flex-shrink:0;}
+.logo-text{font-family:'Cinzel',serif;font-size:.82rem;font-weight:700;letter-spacing:.2em;color:var(--white);}
+.logo-text em{color:var(--orange);font-style:normal;}
+.nav-links{display:flex;list-style:none;gap:32px;align-items:center;}
+.nav-links a{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--silver);text-decoration:none;transition:color .2s;position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:var(--orange);transition:width .25s;}
+.nav-links a:hover,.nav-links a.active{color:var(--orange);}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+.nav-cta-btn{background:transparent!important;border:1px solid var(--border)!important;color:var(--orange)!important;padding:8px 18px;transition:all .25s!important;}
+.nav-cta-btn:hover{background:var(--orange)!important;color:#fff!important;border-color:var(--orange)!important;}
+.nav-cta-btn::after{display:none!important;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{width:22px;height:1.5px;background:var(--orange);transition:.3s;display:block;}
+.hamburger.active span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.hamburger.active span:nth-child(2){opacity:0;}
+.hamburger.active span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.mob-menu{display:none;position:fixed;top:66px;left:0;right:0;background:rgba(250,250,248,.98);backdrop-filter:blur(20px);padding:28px 5%;border-bottom:1px solid var(--border-lt);flex-direction:column;gap:18px;z-index:999;}
+.mob-menu.open{display:flex;}
+.mob-menu a{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--silver);text-decoration:none;padding:9px 0;border-bottom:1px solid var(--ink);transition:color .2s;}
+.mob-menu a:hover{color:var(--orange);}
+
+/* PAGE HERO */
+.page-hero{padding:140px 5% 80px;background:var(--black);border-bottom:1px solid var(--border-lt);}
+.page-hero-inner{max-width:1160px;margin:0 auto;}
+.page-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:24px;}
+.eyebrow-line{width:40px;height:1px;background:var(--orange);}
+.eyebrow-text{font-size:.68rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--orange);}
+.page-title{font-family:'Cinzel',serif;font-size:clamp(2.4rem,5vw,4.2rem);font-weight:700;line-height:1.1;color:var(--white);margin-bottom:20px;}
+.page-title em{color:var(--orange);font-style:normal;}
+.page-sub{font-size:1.05rem;color:var(--silver);max-width:560px;line-height:1.8;}
+
+/* SECTIONS */
+section{padding:90px 5%;}
+.sec-wrap{max-width:1160px;margin:0 auto;}
+.sec-label{display:inline-flex;align-items:center;gap:10px;font-size:.67rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--orange);margin-bottom:18px;}
+.sec-label::before{content:'';width:28px;height:1px;background:var(--orange);}
+.sec-title{font-family:'Cinzel',serif;font-size:clamp(1.7rem,3vw,2.6rem);font-weight:700;color:var(--white);line-height:1.15;margin-bottom:16px;}
+.sec-title .gl{color:var(--orange);}
+.gold-rule{display:block;width:48px;height:2px;background:var(--orange);margin:20px 0 36px;}
+
+/* MISSION */
+#mission{background:var(--black);}
+.mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.mission-img{width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);display:block;}
+.mission-text p{font-size:.95rem;color:var(--silver);line-height:1.85;margin-bottom:18px;}
+.mission-text p strong{color:var(--white);font-weight:600;}
+
+/* VALUES */
+#values{background:var(--dark);}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border-lt);margin-top:48px;}
+.value-card{background:var(--dark-2);padding:44px 32px;position:relative;}
+.value-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--orange);transform:scaleX(0);transition:transform .3s;}
+.value-card:hover::before{transform:scaleX(1);}
+.value-num{font-family:'Cinzel',serif;font-size:3rem;font-weight:900;color:var(--o10);line-height:1;margin-bottom:16px;}
+.value-card h3{font-family:'Cinzel',serif;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:12px;letter-spacing:.04em;}
+.value-card p{font-size:.86rem;color:var(--silver);line-height:1.75;}
+
+/* TEAM */
+#team{background:var(--black);}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+.team-card{background:var(--dark-2);border:1px solid var(--ink2);overflow:hidden;transition:border-color .25s;}
+.team-card:hover{border-color:var(--border);}
+.team-img{width:100%;aspect-ratio:1;object-fit:cover;object-position:top;display:block;filter:grayscale(20%);}
+.team-info{padding:24px 28px;}
+.team-name{font-family:'Cinzel',serif;font-size:.95rem;font-weight:700;color:var(--white);letter-spacing:.04em;margin-bottom:4px;}
+.team-role{font-size:.74rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:14px;}
+.team-bio{font-size:.84rem;color:var(--silver);line-height:1.7;}
+
+/* NUMBERS */
+#numbers{background:var(--dark);}
+.numbers-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border-lt);margin-top:48px;}
+.number-card{background:var(--dark-2);padding:52px 24px;text-align:center;position:relative;}
+.number-card::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:32px;height:2px;background:var(--orange);}
+.number-n{font-family:'Cinzel',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:900;color:var(--orange);line-height:1;margin-bottom:10px;}
+.number-l{font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--silver);}
+
+/* CTA BAND */
+#cta-band{background:var(--dark-2);border-top:1px solid var(--border-lt);border-bottom:1px solid var(--border-lt);text-align:center;padding:80px 5%;}
+.cta-band-inner{max-width:600px;margin:0 auto;}
+.cta-band-inner h2{font-family:'Cinzel',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;color:var(--white);margin-bottom:14px;line-height:1.2;}
+.cta-band-inner h2 em{color:var(--orange);font-style:normal;}
+.cta-band-inner p{font-size:.95rem;color:var(--silver);margin-bottom:36px;line-height:1.8;}
+.btn-gold{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:15px 34px;border:1px solid var(--orange);transition:background .2s,transform .2s;cursor:pointer;}
+.btn-gold:hover{background:var(--orange-dk);border-color:var(--orange-dk);transform:translateY(-2px);}
+
+/* FOOTER */
+footer{background:var(--dark);border-top:1px solid var(--border-lt);padding:32px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+.foot-logo{font-family:'Cinzel',serif;font-size:.82rem;font-weight:700;letter-spacing:.18em;color:var(--silver);}
+.foot-logo span{color:var(--orange);}
+.foot-links{display:flex;gap:22px;flex-wrap:wrap;}
+.foot-links a{font-size:.74rem;color:rgba(90,74,64,.5);text-decoration:none;letter-spacing:.06em;transition:color .2s;}
+.foot-links a:hover{color:var(--orange);}
+.foot-copy{font-size:.7rem;color:rgba(90,74,64,.35);letter-spacing:.06em;}
+
+/* ANIMATIONS */
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}
+.fade-up.in{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}
+
+@media(max-width:860px){
+  .mission-grid{grid-template-columns:1fr;gap:40px;}
+  .values-grid,.team-grid{grid-template-columns:1fr;}
+  .numbers-grid{grid-template-columns:repeat(2,1fr);}
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  footer{flex-direction:column;text-align:center;}
+  .foot-links{justify-content:center;}
+}
+@media(max-width:560px){
+  .numbers-grid{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="logo-mark.png" width="38" height="38" alt="Cerroni Solutions mark">
+    <span class="logo-text">CERRONI <em>SOLUTIONS</em></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html" class="active">About Us</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="mailto:cerronisolutions@gmail.com">Contact</a></li>
+    <li><a href="https://calendly.com/cerronisolutions" class="nav-cta-btn" target="_blank" rel="noopener">Prenota Call</a></li>
+  </ul>
+  <div class="hamburger" id="hbg"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="about.html">About Us</a>
+  <a href="faq.html">FAQ</a>
+  <a href="mailto:cerronisolutions@gmail.com">Contact</a>
+  <a href="https://calendly.com/cerronisolutions" target="_blank" rel="noopener">Prenota Call →</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-eyebrow fade-up">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">Chi Siamo</span>
+    </div>
+    <h1 class="page-title fade-up d1">Non facciamo marketing.<br><em>Costruiamo sistemi.</em></h1>
+    <p class="page-sub fade-up d2">Cerroni Solutions nasce da una convinzione semplice: la maggior parte delle attività non ha bisogno di più visibilità — ha bisogno di un sistema che trasformi quella visibilità in clienti reali.</p>
+  </div>
+</div>
+
+<!-- MISSION -->
+<section id="mission">
+  <div class="sec-wrap">
+    <div class="mission-grid">
+      <div class="fade-up">
+        <img class="mission-img" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&auto=format&fit=crop&q=80" alt="Marketing strategy">
+      </div>
+      <div class="mission-text fade-up d1">
+        <span class="sec-label">La Nostra Missione</span>
+        <h2 class="sec-title">Risultati concreti,<br><span class="gl">non promesse.</span></h2>
+        <span class="gold-rule"></span>
+        <p>Cerroni Solutions è una realtà specializzata nell'acquisizione clienti per professionisti e attività high-ticket. Il nostro approccio si distingue per la concretezza: non vendiamo visibilità generica, ma costruiamo sistemi replicabili che generano richieste qualificate ogni mese.</p>
+        <p>Ogni cliente è seguito con un sistema su misura che integra <strong>content strategy</strong>, <strong>gestione del processo di conversione</strong> e <strong>advertising mirato</strong>. Il risultato non è un progetto creativo fine a sé stesso, ma un meccanismo che porta clienti.</p>
+        <p>Lavoriamo con un numero limitato di clienti al mese per garantire attenzione, qualità e risultati misurabili.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section id="values">
+  <div class="sec-wrap">
+    <div class="fade-up">
+      <span class="sec-label">I Nostri Valori</span>
+      <h2 class="sec-title">Cosa ci guida<br><span class="gl">ogni giorno.</span></h2>
+      <span class="gold-rule"></span>
+    </div>
+    <div class="values-grid">
+      <div class="value-card fade-up d1">
+        <div class="value-num">01</div>
+        <h3>Risultati Prima di Tutto</h3>
+        <p>Ogni decisione strategica, ogni contenuto, ogni campagna viene valutata in base a un solo criterio: porta clienti? Se la risposta è no, si cambia approccio.</p>
+      </div>
+      <div class="value-card fade-up d2">
+        <div class="value-num">02</div>
+        <h3>Sistemi, Non Tentativi</h3>
+        <p>Il successo non si improvvisa. Costruiamo processi strutturati e replicabili che funzionano indipendentemente dalla fortuna del momento o dall'algoritmo del giorno.</p>
+      </div>
+      <div class="value-card fade-up d3">
+        <div class="value-num">03</div>
+        <h3>Trasparenza Totale</h3>
+        <p>Nessuna promessa irrealistica. Nessun contratto a lungo termine imposto. Solo chiarezza su cosa facciamo, come lo facciamo e quali risultati possiamo aspettarci.</p>
+      </div>
+      <div class="value-card fade-up d1">
+        <div class="value-num">04</div>
+        <h3>Collaborazione Attiva</h3>
+        <p>Il nostro sistema funziona quando il cliente collabora. Non siamo un'agenzia che opera in isolamento — siamo un partner che lavora fianco a fianco con te.</p>
+      </div>
+      <div class="value-card fade-up d2">
+        <div class="value-num">05</div>
+        <h3>Qualità Sopra la Quantità</h3>
+        <p>Lavoriamo con un numero selezionato di clienti. Preferiamo ottenere risultati eccellenti per pochi piuttosto che risultati mediocri per molti.</p>
+      </div>
+      <div class="value-card fade-up d3">
+        <div class="value-num">06</div>
+        <h3>Miglioramento Continuo</h3>
+        <p>Il mercato cambia, gli algoritmi cambiano, i clienti cambiano. Il nostro sistema viene costantemente ottimizzato per adattarsi e mantenere le performance nel tempo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="sec-wrap">
+    <div class="fade-up">
+      <span class="sec-label">Il Team</span>
+      <h2 class="sec-title">Le persone dietro<br><span class="gl">il sistema.</span></h2>
+      <span class="gold-rule"></span>
+    </div>
+    <div class="team-grid">
+      <div class="team-card fade-up d1">
+        <img class="team-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&auto=format&fit=crop&q=80" alt="Piergiorgio Cerroni">
+        <div class="team-info">
+          <div class="team-name">Piergiorgio Cerroni</div>
+          <div class="team-role">Founder & Stratega</div>
+          <p class="team-bio">Specializzato in acquisizione clienti per professionisti high-ticket. Ha sviluppato il metodo Cerroni Solutions dopo anni di esperienza diretta nel campo del marketing e della crescita aziendale.</p>
+        </div>
+      </div>
+      <div class="team-card fade-up d2">
+        <img class="team-img" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&auto=format&fit=crop&q=80" alt="Content Strategist">
+        <div class="team-info">
+          <div class="team-name">Sara M.</div>
+          <div class="team-role">Content Strategist</div>
+          <p class="team-bio">Crea contenuti progettati per convertire. Ogni formato — video, testo, carosello — viene costruito con un obiettivo preciso: generare richieste qualificate, non semplici visualizzazioni.</p>
+        </div>
+      </div>
+      <div class="team-card fade-up d3">
+        <img class="team-img" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&auto=format&fit=crop&q=80" alt="Ads Specialist">
+        <div class="team-info">
+          <div class="team-name">Luca B.</div>
+          <div class="team-role">Advertising Specialist</div>
+          <p class="team-bio">Gestisce le campagne pubblicitarie su Meta e Google con un approccio data-driven. Il suo obiettivo non è spendere budget, ma trovare il modo più efficiente per raggiungere il cliente ideale.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section id="numbers">
+  <div class="sec-wrap">
+    <div class="centered fade-up" style="text-align:center;">
+      <span class="sec-label" style="justify-content:center;"><span style="width:28px;height:1px;background:var(--orange);display:inline-block;margin-right:10px;"></span>I Numeri</span>
+      <h2 class="sec-title">Il sistema in<br><span class="gl">numeri concreti.</span></h2>
+      <span class="gold-rule" style="margin:20px auto 0;"></span>
+    </div>
+    <div class="numbers-grid" style="margin-top:48px;">
+      <div class="number-card fade-up d1">
+        <div class="number-n">+50</div>
+        <div class="number-l">Clienti Seguiti</div>
+      </div>
+      <div class="number-card fade-up d2">
+        <div class="number-n">3x</div>
+        <div class="number-l">Richieste in Media</div>
+      </div>
+      <div class="number-card fade-up d3">
+        <div class="number-n">30 gg</div>
+        <div class="number-l">Primi Risultati</div>
+      </div>
+      <div class="number-card fade-up d1">
+        <div class="number-n">0</div>
+        <div class="number-l">Contratti Vincolanti</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section id="cta-band">
+  <div class="cta-band-inner fade-up">
+    <h2>Pronto a costruire<br><em>il tuo sistema?</em></h2>
+    <p>Prenota una consulenza gratuita. Analizziamo la tua situazione attuale e ti mostriamo come il sistema Cerroni Solutions può funzionare per la tua attività.</p>
+    <a href="https://calendly.com/cerronisolutions" class="btn-gold" target="_blank" rel="noopener">Prenota la tua Call Gratuita →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-logo">CERRONI <span>SOLUTIONS</span></div>
+  <div class="foot-links">
+    <a href="mailto:cerronisolutions@gmail.com">cerronisolutions@gmail.com</a>
+    <a href="https://calendly.com/cerronisolutions" target="_blank" rel="noopener">Prenota Call</a>
+    <a href="#" onclick="alert('Privacy Policy disponibile sulla home page.');return false;">Privacy Policy</a>
+    <a href="#" onclick="alert('Termini di Servizio disponibili sulla home page.');return false;">Termini di Servizio</a>
+  </div>
+  <div class="foot-copy">© 2025 Cerroni Solutions. Tutti i diritti riservati.</div>
+</footer>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>60);},{passive:true});
+  var hbg=document.getElementById('hbg');
+  var mob=document.getElementById('mobMenu');
+  hbg.addEventListener('click',function(){hbg.classList.toggle('active');mob.classList.toggle('open');});
+  mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){hbg.classList.remove('active');mob.classList.remove('open');});});
+  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+  document.querySelectorAll('.fade-up').forEach(function(el){obs.observe(el);});
+})();
+</script>
+</body>
+</html>
