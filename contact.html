@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo-mark.png">
+  <link rel="apple-touch-icon" href="logo-mark.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contatta Cerroni Solutions — Sistema strutturato di acquisizione clienti high-ticket.">
+<title>Contatto — Cerroni Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --orange:#B8712A;--orange-lt:#CD8E42;--orange-dk:#8B4E12;
+  --black:#FEFCF4;--dark:linear-gradient(160deg,#B8860B 0%,#D4A020 18%,#F0CC40 36%,#FFF0A0 52%,#F0CC40 68%,#D4A020 82%,#B8860B 100%);--dark-2:#FFFFFF;--dark-3:#FEE8A8;--dark-4:#F0C030;
+  --white:#1C1410;--silver-light:#2D2018;--silver:#5A4A40;
+  --green:#1E9E5A;--red:#C0392B;
+  --radius:2px;
+  --o10:rgba(184,113,42,.10);--o15:rgba(184,113,42,.15);
+  --o20:rgba(184,113,42,.20);--o30:rgba(184,113,42,.30);
+  --o40:rgba(184,113,42,.40);--o60:rgba(184,113,42,.60);
+  --border:rgba(255,212,156,.18);--border-lt:rgba(184,113,42,.10);
+  --ink:rgba(28,20,16,.06);--ink2:rgba(28,20,16,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--silver-light);font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.75;overflow-x:hidden;}
+::selection{background:rgba(184,113,42,.20);color:var(--white);}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background:var(--dark);}
+::-webkit-scrollbar-thumb{background:var(--orange-dk);}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(250,250,248,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border-lt);transition:border-color .3s,box-shadow .3s;}
+nav.scrolled{border-bottom-color:var(--border);box-shadow:0 2px 24px rgba(28,20,16,.07);}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-svg{width:36px;height:36px;flex-shrink:0;}
+.logo-text{font-family:'Cinzel',serif;font-size:.82rem;font-weight:700;letter-spacing:.2em;color:var(--white);}
+.logo-text em{color:var(--orange);font-style:normal;}
+.nav-links{display:flex;list-style:none;gap:32px;align-items:center;}
+.nav-links a{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--silver);text-decoration:none;transition:color .2s;position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:var(--orange);transition:width .25s;}
+.nav-links a:hover,.nav-links a.active{color:var(--orange);}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+.nav-cta-btn{background:transparent!important;border:1px solid var(--border)!important;color:var(--orange)!important;padding:8px 18px;transition:all .25s!important;}
+.nav-cta-btn:hover{background:var(--orange)!important;color:#fff!important;border-color:var(--orange)!important;}
+.nav-cta-btn::after{display:none!important;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{width:22px;height:1.5px;background:var(--orange);transition:.3s;display:block;}
+.hamburger.active span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.hamburger.active span:nth-child(2){opacity:0;}
+.hamburger.active span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.mob-menu{display:none;position:fixed;top:66px;left:0;right:0;background:rgba(250,250,248,.98);backdrop-filter:blur(20px);padding:28px 5%;border-bottom:1px solid var(--border-lt);flex-direction:column;gap:18px;z-index:999;}
+.mob-menu.open{display:flex;}
+.mob-menu a{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--silver);text-decoration:none;padding:9px 0;border-bottom:1px solid var(--ink);transition:color .2s;}
+.mob-menu a:hover{color:var(--orange);}
+
+/* ── PAGE HERO ── */
+.page-hero{padding:140px 5% 72px;background:var(--black);border-bottom:1px solid var(--border-lt);text-align:center;}
+.page-hero-eyebrow{display:inline-flex;align-items:center;gap:12px;margin-bottom:22px;}
+.eyebrow-line{width:40px;height:1px;background:var(--orange);}
+.eyebrow-text{font-size:.68rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--orange);}
+.page-hero h1{font-family:'Cinzel',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;color:var(--white);line-height:1.1;margin-bottom:18px;}
+.page-hero h1 span{color:var(--orange);}
+.page-hero p{font-size:1rem;color:var(--silver);max-width:520px;margin:0 auto;line-height:1.8;}
+
+/* ── CONTACT SECTION ── */
+.contact-section{padding:100px 5%;background:var(--dark);}
+.contact-wrap{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.5fr;gap:80px;align-items:start;}
+
+/* Left info panel */
+.contact-info{}
+.contact-info-label{font-size:.67rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--orange);display:flex;align-items:center;gap:10px;margin-bottom:20px;}
+.contact-info-label::before{content:'';width:28px;height:1px;background:var(--orange);}
+.contact-info h2{font-family:'Cinzel',serif;font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:700;color:var(--white);line-height:1.2;margin-bottom:20px;}
+.contact-info h2 span{color:var(--orange);}
+.gold-rule{display:block;width:48px;height:2px;background:var(--orange);margin:0 0 28px;}
+.contact-info p{font-size:.95rem;color:var(--silver);line-height:1.8;margin-bottom:36px;}
+
+.contact-detail{display:flex;flex-direction:column;gap:20px;margin-bottom:40px;}
+.cd-item{display:flex;align-items:flex-start;gap:16px;}
+.cd-icon{width:44px;height:44px;background:var(--o10);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.2s;}
+.cd-icon svg{color:var(--orange);}
+.cd-text{}
+.cd-label{font-size:.65rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--silver);margin-bottom:4px;}
+.cd-value{font-size:.95rem;color:var(--white);}
+.cd-value a{color:var(--white);text-decoration:none;transition:color .2s;}
+.cd-value a:hover{color:var(--orange);}
+
+.contact-note{background:var(--o10);border:1px solid var(--border);padding:22px 24px;font-size:.82rem;color:var(--silver);line-height:1.7;}
+.contact-note strong{color:var(--orange);font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.06em;display:block;margin-bottom:6px;}
+
+/* Right form */
+.contact-form-wrap{background:var(--dark-2);border:1px solid var(--ink2);padding:48px 44px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.form-group{display:flex;flex-direction:column;gap:8px;margin-bottom:20px;}
+.form-group label{font-size:.65rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--silver);}
+.form-group input,
+.form-group select,
+.form-group textarea{width:100%;background:var(--dark-3);border:1px solid var(--ink2);color:var(--silver-light);font-family:'Cormorant Garamond',serif;font-size:1rem;padding:13px 16px;outline:none;transition:border-color .2s,background .2s;appearance:none;-webkit-appearance:none;}
+.form-group input::placeholder,
+.form-group textarea::placeholder{color:rgba(90,74,64,.4);}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{border-color:var(--orange);background:var(--dark-2);}
+.form-group textarea{resize:vertical;min-height:130px;}
+.form-group select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23FFD49C' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;}
+.form-check{display:flex;align-items:flex-start;gap:12px;margin-bottom:28px;}
+.form-check input[type=checkbox]{width:18px;height:18px;flex-shrink:0;accent-color:var(--orange);margin-top:3px;cursor:pointer;}
+.form-check label{font-size:.82rem;color:var(--silver);line-height:1.6;cursor:pointer;}
+.form-check a{color:var(--orange);text-decoration:none;}
+.form-check a:hover{text-decoration:underline;}
+.btn-submit{width:100%;background:var(--orange);color:#fff;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--orange);padding:17px 32px;cursor:pointer;transition:background .2s,transform .2s;display:flex;align-items:center;justify-content:center;gap:10px;}
+.btn-submit:hover{background:var(--orange-dk);border-color:var(--orange-dk);transform:translateY(-2px);}
+.btn-submit:active{transform:translateY(0);}
+.form-success{display:none;text-align:center;padding:48px 32px;}
+.form-success svg{color:var(--orange);margin-bottom:20px;}
+.form-success h3{font-family:'Cinzel',serif;font-size:1.2rem;color:var(--white);margin-bottom:12px;}
+.form-success p{font-size:.9rem;color:var(--silver);line-height:1.75;}
+
+/* ── FOOTER ── */
+footer{background:var(--dark);border-top:1px solid var(--border-lt);padding:32px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+.foot-logo{display:flex;align-items:center;gap:10px;font-family:'Cinzel',serif;font-size:.82rem;font-weight:700;letter-spacing:.18em;color:var(--silver);}
+.foot-logo span{color:var(--orange);}
+.foot-links{display:flex;gap:22px;flex-wrap:wrap;}
+.foot-links a{font-size:.74rem;color:rgba(90,74,64,.5);text-decoration:none;letter-spacing:.06em;transition:color .2s;}
+.foot-links a:hover{color:var(--orange);}
+.foot-copy{font-size:.7rem;color:rgba(90,74,64,.35);letter-spacing:.06em;}
+
+/* ── ANIMATIONS ── */
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}
+.fade-up.in{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:860px){
+  .contact-wrap{grid-template-columns:1fr;gap:48px;}
+  .contact-form-wrap{padding:32px 24px;}
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  footer{flex-direction:column;text-align:center;}
+  .foot-links{justify-content:center;}
+}
+@media(max-width:560px){
+  .form-row{grid-template-columns:1fr;}
+}
+
+/* ── METALLIC GOLD 3D SECTIONS ───────────────────── */
+#problema,#come-funziona,#benefici,#risultati,footer,.marquee-wrap,.contact-section,.page-hero-alt{
+  background-image:linear-gradient(160deg,#B8860B 0%,#D4A020 18%,#F0CC40 36%,#FFF0A0 52%,#F0CC40 68%,#D4A020 82%,#B8860B 100%);
+  position:relative;
+}
+#problema::before,#come-funziona::before,#benefici::before,#risultati::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(255,255,220,.18) 0%,rgba(255,255,255,.08) 40%,rgba(0,0,0,.06) 100%);
+  pointer-events:none;z-index:0;
+}
+#problema .sec-wrap,#come-funziona .sec-wrap,#benefici .sec-wrap,#risultati .sec-wrap{position:relative;z-index:1;}
+footer{
+  background-image:linear-gradient(160deg,#B8860B 0%,#D4A020 18%,#F0CC40 36%,#FFF0A0 52%,#F0CC40 68%,#D4A020 82%,#B8860B 100%);
+  border-top:1px solid rgba(255,255,180,.4);
+  box-shadow:inset 0 1px 0 rgba(255,255,200,.5),inset 0 -1px 0 rgba(120,80,0,.2);
+}
+.marquee-wrap{
+  background-image:linear-gradient(160deg,#B8860B 0%,#D4A020 18%,#F0CC40 36%,#FFF0A0 52%,#F0CC40 68%,#D4A020 82%,#B8860B 100%);
+  border-top:1px solid rgba(255,255,180,.4);border-bottom:1px solid rgba(120,80,0,.15);
+}
+
+/* ── METALLIC SHIMMER ON ACCENT TEXT ─────────────── */
+@keyframes metalShimmer{
+  0%  {background-position:200% center;}
+  100%{background-position:-200% center;}
+}
+.gl,.hl,.sec-label,.eyebrow-text,.step-tag,.serv-num,.stat-n,
+.page-hero h1 span,.contact-info h2 span,.vb-quote em,
+.fcta-title em,.prob-statement strong,.sol-tagline em,
+.testi-role,.scar-badge,.logo-text em{
+  background:linear-gradient(90deg,
+    #8B4E12 0%,
+    #B8712A 20%,
+    #F0CC40 38%,
+    #FFF8C0 50%,
+    #F0CC40 62%,
+    #B8712A 80%,
+    #8B4E12 100%
+  );
+  background-size:250% auto;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation:metalShimmer 4s linear infinite;
+}
+/* Slower, subtler shimmer on labels */
+.sec-label,.eyebrow-text,.step-tag,.serv-num,.testi-role,.scar-badge{
+  animation-duration:6s;
+}
+/* Keep stat numbers bold & large */
+.stat-n{
+  font-family:'Cinzel',serif;
+  display:inline-block;
+}
+/* Gold rule stays solid */
+.gold-rule,.eyebrow-line{
+  background:linear-gradient(90deg,#8B4E12,#F0CC40,#8B4E12) !important;
+  background-size:200% auto !important;
+  animation:metalShimmer 4s linear infinite !important;
+  -webkit-text-fill-color:unset !important;
+  -webkit-background-clip:unset !important;
+  background-clip:unset !important;
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="logo-mark.png" class="logo-svg" width="38" height="38" alt="Cerroni Solutions mark">
+    <span class="logo-text">CERRONI <em>SOLUTIONS</em></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+    <li><a href="https://calendly.com/cerronisolutions" class="nav-cta-btn" target="_blank" rel="noopener">Prenota Call</a></li>
+  </ul>
+  <div class="hamburger" id="hbg"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="about.html">About Us</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+  <a href="https://calendly.com/cerronisolutions" target="_blank" rel="noopener">Prenota Call →</a>
+</div>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero fade-up">
+  <div class="page-hero-eyebrow">
+    <span class="eyebrow-line"></span>
+    <span class="eyebrow-text">Inizia Ora</span>
+    <span class="eyebrow-line"></span>
+  </div>
+  <h1>Parliamo del <span>Tuo Progetto</span></h1>
+  <p>Raccontaci la tua situazione attuale. Ti risponderemo entro 24 ore per capire insieme se siamo la soluzione giusta per te.</p>
+</section>
+
+<!-- ── CONTACT SECTION ── -->
+<section class="contact-section">
+  <div class="contact-wrap">
+
+    <!-- Info panel -->
+    <div class="contact-info fade-up">
+      <span class="contact-info-label">Contattaci</span>
+      <h2>Un Sistema,<br><span>Non Tentativi</span></h2>
+      <span class="gold-rule"></span>
+      <p>Che tu stia cercando di aumentare le richieste qualificate, ridurre i costi per acquisizione o costruire un flusso prevedibile di clienti — partiamo da dove sei adesso.</p>
+
+      <div class="contact-detail">
+        <div class="cd-item">
+          <div class="cd-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="cd-text">
+            <div class="cd-label">Email</div>
+            <div class="cd-value"><a href="mailto:cerronisolutions@gmail.com">cerronisolutions@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="cd-item">
+          <div class="cd-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="cd-text">
+            <div class="cd-label">Prenota una Call</div>
+            <div class="cd-value"><a href="https://calendly.com/cerronisolutions" target="_blank" rel="noopener">Scegli il tuo orario →</a></div>
+          </div>
+        </div>
+        <div class="cd-item">
+          <div class="cd-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="cd-text">
+            <div class="cd-label">Tempo di Risposta</div>
+            <div class="cd-value">Entro 24 ore lavorative</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-note">
+        <strong>Disponibilità Limitata</strong>
+        Accettiamo un numero ristretto di nuovi clienti ogni mese per garantire qualità e attenzione. Se sei interessato, ti consigliamo di contattarci il prima possibile.
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="contact-form-wrap fade-up d1">
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nome">Nome *</label>
+            <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required>
+          </div>
+          <div class="form-group">
+            <label for="cognome">Cognome *</label>
+            <input type="text" id="cognome" name="cognome" placeholder="Il tuo cognome" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="tua@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="telefono">Telefono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="+39 000 000 0000">
+        </div>
+        <div class="form-group">
+          <label for="settore">Settore / Tipo di attività *</label>
+          <select id="settore" name="settore" required>
+            <option value="" disabled selected>Seleziona il tuo settore</option>
+            <option value="consulenza">Consulenza / Coaching</option>
+            <option value="professionale">Professionista (avvocato, medico, ecc.)</option>
+            <option value="agenzia">Agenzia / Studio</option>
+            <option value="ecommerce">E-commerce</option>
+            <option value="saas">SaaS / Tech</option>
+            <option value="formazione">Formazione / Corsi</option>
+            <option value="altro">Altro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="budget">Budget mensile indicativo</label>
+          <select id="budget" name="budget">
+            <option value="" disabled selected>Seleziona una fascia</option>
+            <option value="500-1000">€500 – €1.000</option>
+            <option value="1000-3000">€1.000 – €3.000</option>
+            <option value="3000-5000">€3.000 – €5.000</option>
+            <option value="5000+">€5.000+</option>
+            <option value="da-definire">Da definire insieme</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="messaggio">Raccontaci la tua situazione *</label>
+          <textarea id="messaggio" name="messaggio" placeholder="Descrivi brevemente il tuo business, la situazione attuale e cosa vorresti ottenere..." required></textarea>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="privacy" name="privacy" required>
+          <label for="privacy">Ho letto e accetto la <a href="#" onclick="openModal('modal-privacy');return false;">Privacy Policy</a>. Acconsento al trattamento dei miei dati personali per ricevere una risposta alla mia richiesta.</label>
+        </div>
+        <button type="submit" class="btn-submit">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Invia il Messaggio
+        </button>
+      </form>
+
+      <!-- Success state -->
+      <div class="form-success" id="formSuccess">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <h3>Messaggio Inviato!</h3>
+        <p>Grazie per averci contattato.<br>Ti risponderemo entro 24 ore lavorative.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="foot-logo"><img src="logo-mark.png" alt="" width="28" height="28" style="object-fit:contain;">CERRONI <span>SOLUTIONS</span></div>
+  <div class="foot-links">
+    <a href="mailto:cerronisolutions@gmail.com">cerronisolutions@gmail.com</a>
+    <a href="https://calendly.com/cerronisolutions" target="_blank" rel="noopener">Prenota Call</a>
+    <a href="#" onclick="openModal('modal-privacy');return false;">Privacy Policy</a>
+    <a href="#" onclick="openModal('modal-terms');return false;">Termini di Servizio</a>
+  </div>
+  <div class="foot-copy">© 2025 Cerroni Solutions. Tutti i diritti riservati.</div>
+</footer>
+
+<!-- ── MODALS ── -->
+<div class="modal-backdrop" id="modal-privacy" role="dialog" aria-modal="true" tabindex="-1">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modal-privacy')" aria-label="Chiudi">✕</button>
+    <h2 class="modal-title">Privacy Policy</h2>
+    <div class="modal-body">
+      <p><strong>Titolare del trattamento:</strong> Cerroni Solutions – cerronisolutions@gmail.com</p>
+      <h3>1. Dati raccolti</h3>
+      <p>Raccogliamo esclusivamente i dati che fornisci volontariamente tramite il modulo di contatto o la prenotazione di una call: nome, indirizzo e-mail, numero di telefono (facoltativo) e il messaggio inviato.</p>
+      <h3>2. Finalità del trattamento</h3>
+      <p>I dati sono utilizzati per rispondere alle tue richieste, per organizzare consulenze e, previo consenso esplicito, per inviarti comunicazioni di marketing relative ai nostri servizi.</p>
+      <h3>3. Base giuridica</h3>
+      <p>Il trattamento si fonda sul tuo consenso (art. 6, par. 1, lett. a GDPR) o sull'esecuzione di misure precontrattuali su tua richiesta (art. 6, par. 1, lett. b GDPR).</p>
+      <h3>4. Conservazione</h3>
+      <p>I dati sono conservati per il tempo strettamente necessario a soddisfare la finalità per cui sono stati raccolti e comunque non oltre 24 mesi dall'ultimo contatto.</p>
+      <h3>5. Diritti dell'interessato</h3>
+      <p>Hai il diritto di accedere ai tuoi dati, rettificarli, cancellarli, limitarne il trattamento, opporti al trattamento e richiedere la portabilità. Per esercitare questi diritti scrivi a: <a href="mailto:cerronisolutions@gmail.com" style="color:var(--orange)">cerronisolutions@gmail.com</a>.</p>
+      <h3>6. Cookie</h3>
+      <p>Questo sito utilizza esclusivamente cookie tecnici necessari al funzionamento delle pagine. Non vengono utilizzati cookie di profilazione o di terze parti senza il tuo consenso.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="modal-terms" role="dialog" aria-modal="true" tabindex="-1">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modal-terms')" aria-label="Chiudi">✕</button>
+    <h2 class="modal-title">Termini di Servizio</h2>
+    <div class="modal-body">
+      <p><strong>Ultimo aggiornamento:</strong> Gennaio 2025</p>
+      <h3>1. Oggetto</h3>
+      <p>Cerroni Solutions offre servizi di marketing digitale per l'acquisizione clienti, inclusi gestione campagne a pagamento (Meta Ads, Google Ads), creazione di funnel di conversione e ottimizzazione della presenza online.</p>
+      <h3>2. Budget pubblicitario</h3>
+      <p>Il budget destinato alle piattaforme pubblicitarie (Meta, Google, ecc.) è sempre a carico del cliente e viene gestito direttamente dall'inserzionista. Cerroni Solutions non anticipa né detiene fondi pubblicitari per conto dei clienti.</p>
+      <h3>3. Assenza di vincoli</h3>
+      <p>Non esistono contratti a lungo termine obbligatori. I servizi sono erogati su base mensile rinnovabile. Entrambe le parti possono recedere con un preavviso scritto di 15 giorni.</p>
+      <h3>4. Risultati</h3>
+      <p>I risultati dipendono da variabili esterne (mercato, offerta, esecuzione) e non possono essere garantiti. Ci impegniamo a fornire un servizio professionale e trasparente, con reportistica periodica sull'andamento delle campagne.</p>
+      <h3>5. Legge applicabile</h3>
+      <p>I presenti termini sono regolati dalla legge italiana. Per qualsiasi controversia è competente il Foro di residenza del cliente consumatore.</p>
+    </div>
+  </div>
+</div>
+
+<style>
+.modal-backdrop{display:none;position:fixed;inset:0;background:rgba(28,20,16,.55);z-index:2000;align-items:center;justify-content:center;padding:24px;}
+.modal-backdrop.open{display:flex;}
+.modal-box{background:var(--dark-2);border:1px solid var(--border);max-width:680px;width:100%;max-height:82vh;overflow-y:auto;padding:40px 36px;position:relative;}
+.modal-close{position:absolute;top:14px;right:18px;background:none;border:none;cursor:pointer;color:var(--silver);font-size:1.3rem;padding:4px 8px;transition:color .2s;}
+.modal-close:hover{color:var(--orange);}
+.modal-title{font-family:'Cinzel',serif;font-size:1.2rem;color:var(--orange);margin-bottom:24px;letter-spacing:.04em;}
+.modal-body h3{font-family:'Cinzel',serif;font-size:.78rem;color:var(--silver-light);margin:22px 0 8px;letter-spacing:.06em;text-transform:uppercase;}
+.modal-body p{color:var(--silver);font-size:.92rem;line-height:1.8;margin-bottom:10px;}
+</style>
+
+<!-- ── JAVASCRIPT ── -->
+<script>
+/* Nav scroll */
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>20);
+});
+
+/* Hamburger */
+document.getElementById('hbg').addEventListener('click',function(){
+  this.classList.toggle('active');
+  document.getElementById('mobMenu').classList.toggle('open');
+});
+
+/* Modals */
+function openModal(id){
+  const m=document.getElementById(id);
+  if(m){m.classList.add('open');document.body.style.overflow='hidden';}
+}
+function closeModal(id){
+  const m=document.getElementById(id);
+  if(m){m.classList.remove('open');document.body.style.overflow='';}
+}
+document.addEventListener('click',function(e){
+  if(e.target.classList.contains('modal-backdrop'))closeModal(e.target.id);
+});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape')document.querySelectorAll('.modal-backdrop.open').forEach(m=>closeModal(m.id));
+});
+
+/* Fade-in observer */
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(el=>{if(el.isIntersecting)el.target.classList.add('in');});
+},{threshold:.1});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+
+/* Form submit — mailto fallback (no server needed) */
+document.getElementById('contactForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const f=this;
+
+  /* Basic validation */
+  const required=['nome','cognome','email','settore','messaggio','privacy'];
+  let valid=true;
+  required.forEach(id=>{
+    const el=f.querySelector('#'+id);
+    if(el.type==='checkbox'&&!el.checked){el.style.outline='2px solid var(--red)';valid=false;}
+    else if(el.type!=='checkbox'&&!el.value.trim()){el.style.borderColor='var(--red)';valid=false;}
+    else{el.style.outline='';el.style.borderColor='';}
+  });
+  if(!valid)return;
+
+  /* Build mailto string */
+  const nome=f.nome.value+' '+f.cognome.value;
+  const email=f.email.value;
+  const tel=f.telefono.value||'Non fornito';
+  const settore=f.settore.value;
+  const budget=f.budget.value||'Non specificato';
+  const msg=f.messaggio.value;
+
+  const body=`Nome: ${nome}%0AEmail: ${email}%0ATelefono: ${tel}%0ASettore: ${settore}%0ABudget: ${budget}%0A%0AMessaggio:%0A${encodeURIComponent(msg)}`;
+  window.location.href=`mailto:cerronisolutions@gmail.com?subject=Richiesta%20di%20contatto%20-%20${encodeURIComponent(nome)}&body=${body}`;
+
+  /* Show success */
+  f.style.display='none';
+  document.getElementById('formSuccess').style.display='block';
+});
+</script>
+</body>
+</html>

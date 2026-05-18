@@ -2,34 +2,36 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo-mark.png">
+  <link rel="apple-touch-icon" href="logo-mark.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Cerroni Solutions — Sistema strutturato di acquisizione clienti per attività e professionisti high-ticket.">
 <title>Cerroni Solutions — Acquisizione Clienti High-Ticket</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
   /* Claude brand palette — light theme */
-  --orange:#D97757;--orange-lt:#E8977A;--orange-dk:#B85C35;
-  --gold:#D97757;--gold-light:#E8977A;--gold-dark:#B85C35;
+  --orange:#B8712A;--orange-lt:#CD8E42;--orange-dk:#8B4E12;
+  --gold:#FFD49C;--gold-light:#FFE4B8;--gold-dark:#E6B870;
   /* Backgrounds — warm cream scale */
-  --black:#FAFAF8;--dark:#F2EDE6;--dark-2:#FFFFFF;--dark-3:#FAF8F4;--dark-4:#EDE7DF;
+  --black:#FEFCF4;--dark:linear-gradient(160deg,#B8860B 0%,#D4A020 18%,#F0CC40 36%,#FFF0A0 52%,#F0CC40 68%,#D4A020 82%,#B8860B 100%);--dark-2:#FFFFFF;--dark-3:#FEE8A8;--dark-4:#F0C030;
   /* Text — dark ink scale */
   --white:#1C1410;--silver-light:#2D2018;--silver:#5A4A40;
   --green:#1E9E5A;--red:#C0392B;
   --radius:2px;
   /* Utility */
-  --o10:rgba(217,119,87,.10);--o15:rgba(217,119,87,.15);
-  --o20:rgba(217,119,87,.20);--o30:rgba(217,119,87,.30);
-  --o40:rgba(217,119,87,.40);--o60:rgba(217,119,87,.60);
-  --border:rgba(217,119,87,.18);--border-lt:rgba(217,119,87,.10);
+  --o10:rgba(184,113,42,.10);--o15:rgba(184,113,42,.15);
+  --o20:rgba(184,113,42,.20);--o30:rgba(184,113,42,.30);
+  --o40:rgba(184,113,42,.40);--o60:rgba(184,113,42,.60);
+  --border:rgba(255,212,156,.18);--border-lt:rgba(184,113,42,.10);
   --ink:rgba(28,20,16,.06);--ink2:rgba(28,20,16,.10);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{background:var(--black);color:var(--silver-light);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;}
-::selection{background:rgba(217,119,87,.20);color:var(--white);}
+body{background:var(--black);color:var(--silver-light);font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.75;overflow-x:hidden;}
+::selection{background:rgba(184,113,42,.20);color:var(--white);}
 ::-webkit-scrollbar{width:3px;}
 ::-webkit-scrollbar-track{background:var(--dark);}
 ::-webkit-scrollbar-thumb{background:var(--orange-dk);}
@@ -71,7 +73,8 @@ nav.scrolled{border-bottom-color:var(--border);box-shadow:0 2px 24px rgba(28,20,
 .hero-text{flex:0 0 54%;max-width:54%;}
 .hero-img-side{flex:1;position:relative;min-height:520px;align-self:stretch;}
 .hero-img-side img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;border:1px solid var(--border);}
-.hero-img-overlay{position:absolute;inset:0;background:none;}
+.hero-img-overlay{position:absolute;inset:0;background:rgba(28,20,16,.18);}
+.hero-graph{position:absolute;bottom:60px;left:0;right:0;width:100%;height:auto;pointer-events:none;}
 .hero-img-badge{position:absolute;bottom:24px;left:24px;background:rgba(250,250,248,.96);border:1px solid var(--border);backdrop-filter:blur(8px);padding:16px 22px;}
 .hib-num{font-family:'Cinzel',serif;font-size:2rem;font-weight:900;color:var(--orange);line-height:1;}
 .hib-label{font-size:.65rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--silver);margin-top:5px;display:block;}
@@ -89,9 +92,9 @@ h1.hero-h .hl{color:var(--orange);}
 .trust-num{font-family:'Cinzel',serif;font-size:.85rem;font-weight:700;color:var(--orange);}
 
 /* ─── BUTTONS ─────────────────────────────────────── */
-.btn-gold{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:15px 34px;border-radius:var(--radius);border:1px solid var(--orange);transition:background .2s,border-color .2s,transform .2s;cursor:pointer;white-space:nowrap;}
+.btn-gold{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;font-family:'Cormorant Garamond',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:15px 34px;border-radius:var(--radius);border:1px solid var(--orange);transition:background .2s,border-color .2s,transform .2s;cursor:pointer;white-space:nowrap;}
 .btn-gold:hover{background:var(--orange-dk);border-color:var(--orange-dk);transform:translateY(-2px);}
-.btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--orange);font-family:'DM Sans',sans-serif;font-weight:500;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:15px 34px;border-radius:var(--radius);border:1px solid var(--border);transition:all .2s;white-space:nowrap;}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--orange);font-family:'Cormorant Garamond',sans-serif;font-weight:500;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:15px 34px;border-radius:var(--radius);border:1px solid var(--border);transition:all .2s;white-space:nowrap;}
 .btn-outline:hover{border-color:var(--orange);background:var(--o10);transform:translateY(-2px);}
 
 /* ─── MARQUEE ─────────────────────────────────────── */
@@ -271,13 +274,13 @@ section{padding:110px 5%;}
 /* ─── FLOATING CTA ──────────────────────────────── */
 .float-cta{position:fixed;bottom:28px;right:28px;z-index:500;opacity:0;transform:translateY(14px);transition:opacity .3s,transform .3s;pointer-events:none;}
 .float-cta.show{opacity:1;transform:translateY(0);pointer-events:all;}
-.float-cta a{display:flex;align-items:center;gap:8px;background:var(--orange);color:#fff;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:13px 22px;border-radius:var(--radius);box-shadow:0 4px 20px rgba(217,119,87,.35);transition:background .2s,transform .2s;}
+.float-cta a{display:flex;align-items:center;gap:8px;background:var(--orange);color:#fff;font-family:'Cormorant Garamond',sans-serif;font-weight:700;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:13px 22px;border-radius:var(--radius);box-shadow:0 4px 20px rgba(184,113,42,.35);transition:background .2s,transform .2s;}
 .float-cta a:hover{background:var(--orange-dk);transform:translateY(-2px);}
 
 /* ─── FOOTER ─────────────────────────────────────── */
 footer{background:var(--dark);border-top:1px solid var(--border-lt);padding:32px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
-.foot-logo{font-family:'Cinzel',serif;font-size:.82rem;font-weight:700;letter-spacing:.18em;color:var(--silver);}
-.foot-logo span{color:var(--orange);}
+.foot-logo{display:flex;align-items:center;gap:10px;font-family:'Cinzel',serif;font-size:.82rem;font-weight:700;letter-spacing:.18em;color:var(--silver);}
+.foot-logo span{color:var(--orange);}.foot-logo img{width:28px;height:28px;object-fit:contain;}
 .foot-links{display:flex;gap:22px;flex-wrap:wrap;}
 .foot-links a{font-size:.74rem;color:rgba(90,74,64,.5);text-decoration:none;letter-spacing:.06em;transition:color .2s;}
 .foot-links a:hover{color:var(--orange);}
@@ -334,6 +337,70 @@ footer{background:var(--dark);border-top:1px solid var(--border-lt);padding:32px
   .trust-sep{display:none;}
 }
 
+
+/* ── METALLIC GOLD 3D SECTIONS ───────────────────── */
+#problema,#come-funziona,#benefici,#risultati,footer,.marquee-wrap,.contact-section,.page-hero-alt{
+  background-image:linear-gradient(160deg,#B8860B 0%,#D4A020 18%,#F0CC40 36%,#FFF0A0 52%,#F0CC40 68%,#D4A020 82%,#B8860B 100%);
+  position:relative;
+}
+#problema::before,#come-funziona::before,#benefici::before,#risultati::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(255,255,220,.18) 0%,rgba(255,255,255,.08) 40%,rgba(0,0,0,.06) 100%);
+  pointer-events:none;z-index:0;
+}
+#problema .sec-wrap,#come-funziona .sec-wrap,#benefici .sec-wrap,#risultati .sec-wrap{position:relative;z-index:1;}
+footer{
+  background-image:linear-gradient(160deg,#B8860B 0%,#D4A020 18%,#F0CC40 36%,#FFF0A0 52%,#F0CC40 68%,#D4A020 82%,#B8860B 100%);
+  border-top:1px solid rgba(255,255,180,.4);
+  box-shadow:inset 0 1px 0 rgba(255,255,200,.5),inset 0 -1px 0 rgba(120,80,0,.2);
+}
+.marquee-wrap{
+  background-image:linear-gradient(160deg,#B8860B 0%,#D4A020 18%,#F0CC40 36%,#FFF0A0 52%,#F0CC40 68%,#D4A020 82%,#B8860B 100%);
+  border-top:1px solid rgba(255,255,180,.4);border-bottom:1px solid rgba(120,80,0,.15);
+}
+
+/* ── METALLIC SHIMMER ON ACCENT TEXT ─────────────── */
+@keyframes metalShimmer{
+  0%  {background-position:200% center;}
+  100%{background-position:-200% center;}
+}
+.gl,.hl,.sec-label,.eyebrow-text,.step-tag,.serv-num,.stat-n,
+.page-hero h1 span,.contact-info h2 span,.vb-quote em,
+.fcta-title em,.prob-statement strong,.sol-tagline em,
+.testi-role,.scar-badge,.logo-text em{
+  background:linear-gradient(90deg,
+    #8B4E12 0%,
+    #B8712A 20%,
+    #F0CC40 38%,
+    #FFF8C0 50%,
+    #F0CC40 62%,
+    #B8712A 80%,
+    #8B4E12 100%
+  );
+  background-size:250% auto;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation:metalShimmer 4s linear infinite;
+}
+/* Slower, subtler shimmer on labels */
+.sec-label,.eyebrow-text,.step-tag,.serv-num,.testi-role,.scar-badge{
+  animation-duration:6s;
+}
+/* Keep stat numbers bold & large */
+.stat-n{
+  font-family:'Cinzel',serif;
+  display:inline-block;
+}
+/* Gold rule stays solid */
+.gold-rule,.eyebrow-line{
+  background:linear-gradient(90deg,#8B4E12,#F0CC40,#8B4E12) !important;
+  background-size:200% auto !important;
+  animation:metalShimmer 4s linear infinite !important;
+  -webkit-text-fill-color:unset !important;
+  -webkit-background-clip:unset !important;
+  background-clip:unset !important;
+}
 </style>
 </head>
 <body>
@@ -347,7 +414,7 @@ footer{background:var(--dark);border-top:1px solid var(--border-lt);padding:32px
   <ul class="nav-links">
     <li><a href="about.html">About Us</a></li>
     <li><a href="faq.html">FAQ</a></li>
-    <li><a href="mailto:cerronisolutions@gmail.com">Contact</a></li>
+    <li><a href="contact.html">Contact</a></li>
     <li><a href="https://calendly.com/cerronisolutions" class="nav-cta-btn" target="_blank" rel="noopener">Prenota Call</a></li>
   </ul>
   <div class="hamburger" id="hbg"><span></span><span></span><span></span></div>
@@ -355,7 +422,7 @@ footer{background:var(--dark);border-top:1px solid var(--border-lt);padding:32px
 <div class="mob-menu" id="mobMenu">
   <a href="about.html">About Us</a>
   <a href="faq.html">FAQ</a>
-  <a href="mailto:cerronisolutions@gmail.com">Contact</a>
+  <a href="contact.html">Contact</a>
   <a href="https://calendly.com/cerronisolutions" target="_blank" rel="noopener">Prenota Call →</a>
 </div>
 
@@ -390,6 +457,23 @@ footer{background:var(--dark);border-top:1px solid var(--border-lt);padding:32px
     <div class="hero-img-side fade-up d2">
       <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=900&auto=format&fit=crop&q=80" alt="Marketing analytics dashboard" loading="eager">
       <div class="hero-img-overlay"></div>
+      <!-- Upward graph overlay -->
+      <svg class="hero-graph" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <!-- Grid lines -->
+        <line x1="0" y1="180" x2="400" y2="180" stroke="rgba(184,113,42,.15)" stroke-width="1"/>
+        <line x1="0" y1="130" x2="400" y2="130" stroke="rgba(184,113,42,.15)" stroke-width="1"/>
+        <line x1="0" y1="80" x2="400" y2="80" stroke="rgba(184,113,42,.15)" stroke-width="1"/>
+        <line x1="0" y1="30" x2="400" y2="30" stroke="rgba(184,113,42,.15)" stroke-width="1"/>
+        <!-- Area fill -->
+        <path d="M0,185 C40,182 70,178 100,168 C130,158 150,148 190,130 C230,112 250,100 290,75 C320,55 350,38 400,18 L400,200 L0,200 Z" fill="rgba(255,212,156,.12)"/>
+        <!-- Main line -->
+        <path d="M0,185 C40,182 70,178 100,168 C130,158 150,148 190,130 C230,112 250,100 290,75 C320,55 350,38 400,18" fill="none" stroke="#FFD49C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Dots -->
+        <circle cx="100" cy="168" r="4" fill="#FFD49C"/>
+        <circle cx="190" cy="130" r="4" fill="#FFD49C"/>
+        <circle cx="290" cy="75"  r="4" fill="#FFD49C"/>
+        <circle cx="400" cy="18"  r="5" fill="#FFD49C"/>
+      </svg>
       <div class="hero-img-badge">
         <span class="hib-num">+3x</span>
         <span class="hib-label">Richieste Qualificate</span>
@@ -429,21 +513,21 @@ footer{background:var(--dark);border-top:1px solid var(--border-lt);padding:32px
     <div class="pain-grid">
       <div class="pain-card fade-up d1">
         <div class="pain-icon-wrap">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFD49C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg>
         </div>
         <h3>Contenuti che non generano clienti</h3>
         <p>Produci contenuti ogni giorno, ma non si traducono in richieste concrete o opportunità di business reale.</p>
       </div>
       <div class="pain-card fade-up d2">
         <div class="pain-icon-wrap">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFD49C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
         </div>
         <h3>Traffico che non diventa richieste</h3>
         <p>Hai visitatori, follower, visualizzazioni — ma nessun sistema strutturato per convertirli in lead qualificati.</p>
       </div>
       <div class="pain-card fade-up d3">
         <div class="pain-icon-wrap">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFD49C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
         </div>
         <h3>Nessun processo strutturato</h3>
         <p>L'acquisizione clienti dipende dalla fortuna del momento, non da un sistema replicabile e scalabile.</p>
@@ -468,21 +552,21 @@ footer{background:var(--dark);border-top:1px solid var(--border-lt);padding:32px
       <div class="sol-card fade-up d1">
         <div class="sol-accent"></div>
         <div class="sol-num">01</div>
-        <div class="sol-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <div class="sol-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFD49C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
         <h3>Contenuti Strategici</h3>
         <p>Contenuti progettati per attirare attenzione qualificata e generare richieste concrete — non solo visualizzazioni.</p>
       </div>
       <div class="sol-card fade-up d2">
         <div class="sol-accent"></div>
         <div class="sol-num">02</div>
-        <div class="sol-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+        <div class="sol-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFD49C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
         <h3>Gestione del Processo</h3>
         <p>Strutturazione di DM, follow-up e conversione per trasformare ogni lead in un'opportunità concreta e chiusa.</p>
       </div>
       <div class="sol-card fade-up d3">
         <div class="sol-accent"></div>
         <div class="sol-num">03</div>
-        <div class="sol-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+        <div class="sol-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFD49C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
         <h3>Advertising Mirato</h3>
         <p>Amplificazione dei contenuti e acquisizione di traffico profilato per raggiungere il cliente ideale in modo scalabile.</p>
       </div>
@@ -540,7 +624,7 @@ footer{background:var(--dark);border-top:1px solid var(--border-lt);padding:32px
     <div class="serv-grid">
       <div class="serv-card fade-up d1">
         <span class="serv-num">01 — Servizio</span>
-        <div class="serv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <div class="serv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFD49C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
         <h3>Content Strategy</h3>
         <p>Contenuti progettati per attirare attenzione qualificata e generare richieste concrete, non solo visibilità.</p>
         <ul class="serv-list">
@@ -554,7 +638,7 @@ footer{background:var(--dark);border-top:1px solid var(--border-lt);padding:32px
       </div>
       <div class="serv-card fade-up d2">
         <span class="serv-num">02 — Servizio</span>
-        <div class="serv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+        <div class="serv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFD49C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
         <h3>Gestione e Processo</h3>
         <p>Strutturazione del processo di conversione: dalla prima risposta alla chiusura, ogni passo è ottimizzato.</p>
         <ul class="serv-list">
@@ -568,7 +652,7 @@ footer{background:var(--dark);border-top:1px solid var(--border-lt);padding:32px
       </div>
       <div class="serv-card fade-up d3">
         <span class="serv-num">03 — Servizio</span>
-        <div class="serv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+        <div class="serv-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFD49C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
         <h3>Advertising</h3>
         <p>Amplificazione dei contenuti e acquisizione di traffico profilato per raggiungere il cliente ideale in modo scalabile.</p>
         <ul class="serv-list">
@@ -629,27 +713,27 @@ footer{background:var(--dark);border-top:1px solid var(--border-lt);padding:32px
     </div>
     <div class="benef-flow">
       <div class="benef-item fade-up d1">
-        <div class="benef-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div class="benef-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFD49C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
         <h4>Contenuti<br>che attirano</h4>
       </div>
-      <div class="arr-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="arr-svg"><polyline points="9 18 15 12 9 6"/></svg></div>
+      <div class="arr-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFD49C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="arr-svg"><polyline points="9 18 15 12 9 6"/></svg></div>
       <div class="benef-item fade-up d2">
-        <div class="benef-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg></div>
+        <div class="benef-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFD49C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg></div>
         <h4>Sistemi<br>che qualificano</h4>
       </div>
-      <div class="arr-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="arr-svg"><polyline points="9 18 15 12 9 6"/></svg></div>
+      <div class="arr-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFD49C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="arr-svg"><polyline points="9 18 15 12 9 6"/></svg></div>
       <div class="benef-item fade-up d3">
-        <div class="benef-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <div class="benef-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFD49C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
         <h4>Processi<br>che convertono</h4>
       </div>
-      <div class="arr-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="arr-svg"><polyline points="9 18 15 12 9 6"/></svg></div>
+      <div class="arr-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFD49C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="arr-svg"><polyline points="9 18 15 12 9 6"/></svg></div>
       <div class="benef-item fade-up d4">
-        <div class="benef-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="benef-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFD49C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <h4>Clienti<br>che restano</h4>
       </div>
-      <div class="arr-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="arr-svg"><polyline points="9 18 15 12 9 6"/></svg></div>
+      <div class="arr-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFD49C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="arr-svg"><polyline points="9 18 15 12 9 6"/></svg></div>
       <div class="benef-item fade-up" style="transition-delay:.5s;">
-        <div class="benef-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+        <div class="benef-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFD49C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
         <h4>Crescita<br>che si scala</h4>
       </div>
     </div>
@@ -686,11 +770,11 @@ footer{background:var(--dark);border-top:1px solid var(--border-lt);padding:32px
         <div class="testi-avatar-row">
           <img class="testi-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&auto=format&fit=crop&q=80" alt="Marco R." loading="lazy">
           <div class="testi-stars">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="#D97757" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="#D97757" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="#D97757" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="#D97757" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="#D97757" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#FFD49C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#FFD49C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#FFD49C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#FFD49C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#FFD49C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
         </div>
         <p class="testi-text">"In meno di 45 giorni avevo un flusso costante di richieste in DM. Il sistema funziona davvero — non è teoria, è esecuzione concreta."</p>
@@ -703,11 +787,11 @@ footer{background:var(--dark);border-top:1px solid var(--border-lt);padding:32px
         <div class="testi-avatar-row">
           <img class="testi-avatar" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=120&h=120&auto=format&fit=crop&q=80" alt="Giulia T." loading="lazy">
           <div class="testi-stars">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="#D97757" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="#D97757" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="#D97757" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="#D97757" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="#D97757" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#FFD49C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#FFD49C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#FFD49C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#FFD49C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#FFD49C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
         </div>
         <p class="testi-text">"Avevo contenuti, follower, traffico — ma zero conversioni. Cerroni Solutions ha trasformato quella visibilità in un sistema che genera clienti ogni settimana."</p>
@@ -720,11 +804,11 @@ footer{background:var(--dark);border-top:1px solid var(--border-lt);padding:32px
         <div class="testi-avatar-row">
           <img class="testi-avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&auto=format&fit=crop&q=80" alt="Andrea M." loading="lazy">
           <div class="testi-stars">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="#D97757" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="#D97757" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="#D97757" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="#D97757" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="#D97757" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#FFD49C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#FFD49C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#FFD49C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#FFD49C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#FFD49C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
         </div>
         <p class="testi-text">"Il processo è strutturato, chiaro e soprattutto replicabile. Finalmente ho smesso di dipendere dal passaparola e ho un flusso prevedibile di nuovi clienti."</p>
@@ -775,7 +859,7 @@ footer{background:var(--dark);border-top:1px solid var(--border-lt);padding:32px
   <div class="sec-wrap">
     <div class="fcta-inner">
       <div class="scar-badge fade-up">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="#D97757" stroke="#D97757" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="#FFD49C" stroke="#FFD49C" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         Disponibilità limitata a pochi clienti al mese
       </div>
       <h2 class="fcta-title fade-up">Attiva Ora il Tuo<br><em>Sistema di Acquisizione Clienti</em></h2>
@@ -791,7 +875,7 @@ footer{background:var(--dark);border-top:1px solid var(--border-lt);padding:32px
 
 <!-- ── FOOTER ── -->
 <footer>
-  <div class="foot-logo">CERRONI <span>SOLUTIONS</span></div>
+  <div class="foot-logo"><img src="logo-mark.png" alt="Cerroni Solutions" width="28" height="28">CERRONI <span>SOLUTIONS</span></div>
   <div class="foot-links">
     <a href="mailto:cerronisolutions@gmail.com">cerronisolutions@gmail.com</a>
     <a href="https://calendly.com/cerronisolutions" target="_blank" rel="noopener">Prenota Call</a>
@@ -809,163 +893,116 @@ footer{background:var(--dark);border-top:1px solid var(--border-lt);padding:32px
   </a>
 </div>
 
+
 <!-- ── MODAL: PRIVACY POLICY ── -->
-<div class="modal-backdrop" id="modal-privacy" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
+<div class="modal-backdrop" id="modal-privacy" role="dialog" aria-modal="true" tabindex="-1">
   <div class="modal-box">
-    <div class="modal-head">
-      <h2 id="privacy-title">Privacy Policy</h2>
-      <button class="modal-close" onclick="closeModal('modal-privacy')" aria-label="Chiudi">×</button>
-    </div>
+    <button class="modal-close" onclick="closeModal('modal-privacy')" aria-label="Chiudi">✕</button>
+    <h2 class="modal-title">Privacy Policy</h2>
     <div class="modal-body">
-      <h3>1. Titolare del Trattamento</h3>
-      <p>Cerroni Solutions, con sede operativa in Italia. Contatto: <a href="mailto:cerronisolutions@gmail.com" style="color:var(--orange)">cerronisolutions@gmail.com</a></p>
-
-      <h3>2. Dati Raccolti</h3>
-      <p>Raccogliamo esclusivamente i dati forniti volontariamente tramite il modulo di contatto o la prenotazione della call (nome, indirizzo email, numero di telefono se fornito). Non raccogliamo dati sensibili.</p>
-
-      <h3>3. Finalità del Trattamento</h3>
-      <ul>
-        <li>Rispondere alle richieste di contatto e consulenza</li>
-        <li>Gestire la relazione commerciale e l'erogazione dei servizi</li>
-        <li>Inviare comunicazioni inerenti ai servizi offerti, previo consenso</li>
-      </ul>
-
-      <h3>4. Base Giuridica</h3>
-      <p>Il trattamento è basato sul consenso dell'interessato (art. 6 par. 1 lett. a GDPR) e sull'esecuzione di un contratto o misure precontrattuali (art. 6 par. 1 lett. b GDPR).</p>
-
-      <h3>5. Conservazione dei Dati</h3>
-      <p>I dati vengono conservati per il tempo strettamente necessario alle finalità per cui sono stati raccolti, e comunque non oltre 5 anni dalla cessazione del rapporto contrattuale.</p>
-
-      <h3>6. Diritti dell'Interessato</h3>
-      <p>Hai il diritto di accedere, rettificare, cancellare i tuoi dati, opporti al trattamento e richiedere la portabilità. Per esercitare tali diritti scrivi a <a href="mailto:cerronisolutions@gmail.com" style="color:var(--orange)">cerronisolutions@gmail.com</a>.</p>
-
-      <h3>7. Cookie</h3>
-      <p>Questo sito utilizza esclusivamente cookie tecnici necessari al funzionamento. Non viene effettuato alcun tracciamento a fini pubblicitari o analitici di terze parti.</p>
+      <p><strong>Titolare del trattamento:</strong> Cerroni Solutions – cerronisolutions@gmail.com</p>
+      <h3>1. Dati raccolti</h3>
+      <p>Raccogliamo esclusivamente i dati che fornisci volontariamente tramite il modulo di contatto o la prenotazione di una call: nome, indirizzo e-mail, numero di telefono (facoltativo) e il messaggio inviato.</p>
+      <h3>2. Finalità del trattamento</h3>
+      <p>I dati sono utilizzati per rispondere alle tue richieste, per organizzare consulenze e, previo consenso esplicito, per inviarti comunicazioni di marketing relative ai nostri servizi.</p>
+      <h3>3. Base giuridica</h3>
+      <p>Il trattamento si fonda sul tuo consenso (art. 6, par. 1, lett. a GDPR) o sull'esecuzione di misure precontrattuali su tua richiesta (art. 6, par. 1, lett. b GDPR).</p>
+      <h3>4. Conservazione</h3>
+      <p>I dati sono conservati per il tempo strettamente necessario a soddisfare la finalità per cui sono stati raccolti e comunque non oltre 24 mesi dall'ultimo contatto.</p>
+      <h3>5. Diritti dell'interessato</h3>
+      <p>Hai il diritto di accedere ai tuoi dati, rettificarli, cancellarli, limitarne il trattamento, opporti al trattamento e richiedere la portabilità. Per esercitare questi diritti scrivi a: <a href="mailto:cerronisolutions@gmail.com" style="color:var(--orange)">cerronisolutions@gmail.com</a>.</p>
+      <h3>6. Cookie</h3>
+      <p>Questo sito utilizza esclusivamente cookie tecnici necessari al funzionamento delle pagine. Non vengono utilizzati cookie di profilazione o di terze parti senza il tuo consenso.</p>
     </div>
   </div>
 </div>
 
 <!-- ── MODAL: TERMINI DI SERVIZIO ── -->
-<div class="modal-backdrop" id="modal-terms" role="dialog" aria-modal="true" aria-labelledby="terms-title">
+<div class="modal-backdrop" id="modal-terms" role="dialog" aria-modal="true" tabindex="-1">
   <div class="modal-box">
-    <div class="modal-head">
-      <h2 id="terms-title">Termini di Servizio</h2>
-      <button class="modal-close" onclick="closeModal('modal-terms')" aria-label="Chiudi">×</button>
-    </div>
+    <button class="modal-close" onclick="closeModal('modal-terms')" aria-label="Chiudi">✕</button>
+    <h2 class="modal-title">Termini di Servizio</h2>
     <div class="modal-body">
+      <p><strong>Ultimo aggiornamento:</strong> Gennaio 2025</p>
       <h3>1. Oggetto</h3>
-      <p>I presenti Termini di Servizio regolano l'utilizzo del sito web di Cerroni Solutions e l'acquisto dei servizi di acquisizione clienti offerti.</p>
-
-      <h3>2. Servizi Offerti</h3>
-      <p>Cerroni Solutions eroga servizi di content strategy, gestione del processo di conversione e advertising. I dettagli specifici, i deliverable e le tempistiche vengono definiti in un accordo scritto separato per ogni cliente.</p>
-
-      <h3>3. Budget Pubblicitario</h3>
-      <p>Il budget destinato alle campagne pubblicitarie (Meta Ads, Google Ads) è sempre a carico del cliente e viene gestito direttamente sugli account del cliente. Cerroni Solutions non anticipa né trattiene budget media.</p>
-
-      <h3>4. Pagamenti</h3>
-      <p>Le modalità di pagamento, le scadenze e le condizioni economiche sono stabilite nell'accordo contrattuale individuale. I pagamenti sono dovuti secondo le scadenze concordate.</p>
-
-      <h3>5. Assenza di Risultati Garantiti</h3>
-      <p>I risultati presentati sul sito sono indicativi e basati su casi reali, ma non costituiscono garanzia di risultati identici. Le performance dipendono da fattori quali mercato, offerta, esecuzione e collaborazione del cliente.</p>
-
-      <h3>6. Proprietà Intellettuale</h3>
-      <p>I contenuti prodotti durante la collaborazione rimangono di proprietà del cliente al saldo completo della fattura. Cerroni Solutions si riserva il diritto di citare il cliente come caso studio, previo accordo.</p>
-
-      <h3>7. Limitazione di Responsabilità</h3>
-      <p>Cerroni Solutions non è responsabile per perdite di guadagno derivanti da fattori esterni al proprio controllo, incluse variazioni degli algoritmi delle piattaforme pubblicitarie.</p>
-
-      <h3>8. Legge Applicabile</h3>
-      <p>I presenti Termini sono regolati dalla legge italiana. Per qualsiasi controversia è competente il Foro di residenza del titolare.</p>
+      <p>Cerroni Solutions offre servizi di marketing digitale per l'acquisizione clienti, inclusi gestione campagne a pagamento (Meta Ads, Google Ads), creazione di funnel di conversione e ottimizzazione della presenza online.</p>
+      <h3>2. Budget pubblicitario</h3>
+      <p>Il budget destinato alle piattaforme pubblicitarie (Meta, Google, ecc.) è sempre a carico del cliente e viene gestito direttamente dall'inserzionista. Cerroni Solutions non anticipa né detiene fondi pubblicitari per conto dei clienti.</p>
+      <h3>3. Assenza di vincoli</h3>
+      <p>Non esistono contratti a lungo termine obbligatori. I servizi sono erogati su base mensile rinnovabile. Entrambe le parti possono recedere con un preavviso scritto di 15 giorni.</p>
+      <h3>4. Risultati</h3>
+      <p>I risultati dipendono da variabili esterne (mercato, offerta, esecuzione) e non possono essere garantiti. Ci impegniamo a fornire un servizio professionale e trasparente, con reportistica periodica sull'andamento delle campagne.</p>
+      <h3>5. Riservatezza</h3>
+      <p>Entrambe le parti si impegnano a mantenere riservate le informazioni confidenziali condivise nel corso del rapporto professionale.</p>
+      <h3>6. Legge applicabile</h3>
+      <p>I presenti termini sono regolati dalla legge italiana. Per qualsiasi controversia è competente il Foro di residenza del cliente consumatore.</p>
+      <h3>7. Contatti</h3>
+      <p>Per qualsiasi chiarimento: <a href="mailto:cerronisolutions@gmail.com" style="color:var(--orange)">cerronisolutions@gmail.com</a></p>
     </div>
   </div>
 </div>
 
+<!-- ── MODAL STYLES ── -->
+<style>
+.modal-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(4px);z-index:9999;align-items:center;justify-content:center;padding:20px;}
+.modal-backdrop.open{display:flex;}
+.modal-box{background:#161616;border:1px solid var(--border);border-radius:12px;max-width:680px;width:100%;max-height:85vh;overflow-y:auto;padding:48px 44px;position:relative;}
+.modal-close{position:absolute;top:16px;right:20px;background:none;border:none;color:var(--silver);font-size:1.2rem;cursor:pointer;line-height:1;padding:4px 8px;transition:color .2s;}
+.modal-close:hover{color:var(--orange);}
+.modal-title{font-family:'Cinzel',serif;font-size:1.5rem;color:var(--orange);margin-bottom:28px;letter-spacing:.04em;}
+.modal-body h3{font-family:'Cinzel',serif;font-size:.9rem;color:var(--silver-light);margin:24px 0 8px;letter-spacing:.06em;text-transform:uppercase;}
+.modal-body p{color:var(--silver);font-size:1rem;line-height:1.8;margin-bottom:12px;}
+</style>
+
+<!-- ── JAVASCRIPT ── -->
 <script>
+/* ── Modal ── */
 function openModal(id){
-  document.getElementById(id).classList.add('open');
-  document.body.style.overflow='hidden';
+  const m=document.getElementById(id);
+  if(m){m.classList.add('open');document.body.style.overflow='hidden';}
 }
 function closeModal(id){
-  document.getElementById(id).classList.remove('open');
-  document.body.style.overflow='';
+  const m=document.getElementById(id);
+  if(m){m.classList.remove('open');document.body.style.overflow='';}
 }
-document.querySelectorAll('.modal-backdrop').forEach(function(m){
-  m.addEventListener('click',function(e){if(e.target===m)closeModal(m.id);});
+document.addEventListener('click',function(e){
+  if(e.target.classList.contains('modal-backdrop'))closeModal(e.target.id);
 });
 document.addEventListener('keydown',function(e){
-  if(e.key==='Escape')document.querySelectorAll('.modal-backdrop.open').forEach(function(m){closeModal(m.id);});
+  if(e.key==='Escape'){document.querySelectorAll('.modal-backdrop.open').forEach(m=>closeModal(m.id));}
 });
-</script>
 
-<script>
-(function(){
-  var nav=document.getElementById('nav');
-  var fc=document.getElementById('floatCta');
-  window.addEventListener('scroll',function(){
-    nav.classList.toggle('scrolled',scrollY>60);
-    fc.classList.toggle('show',scrollY>500);
-  },{passive:true});
+/* ── Scroll animations ── */
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(el=>{if(el.isIntersecting)el.target.classList.add('in');});
+},{threshold:.12});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
 
-  var hbg=document.getElementById('hbg');
-  var mob=document.getElementById('mobMenu');
-  hbg.addEventListener('click',function(){
-    hbg.classList.toggle('active');
-    mob.classList.toggle('open');
+/* ── Floating CTA ── */
+const floatCta=document.getElementById('floatCta');
+window.addEventListener('scroll',()=>{
+  floatCta.classList.toggle('show',window.scrollY>600);
+});
+
+/* ── Stat counter ── */
+function animateStats(){
+  document.querySelectorAll('.stat-n[data-target]').forEach(el=>{
+    const target=parseInt(el.dataset.target);
+    const suffix=el.dataset.suffix||'';
+    let current=0;
+    const step=Math.ceil(target/40);
+    const timer=setInterval(()=>{
+      current+=step;
+      if(current>=target){current=target;clearInterval(timer);}
+      el.textContent=current+suffix;
+    },30);
   });
-  mob.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click',function(){hbg.classList.remove('active');mob.classList.remove('open');});
-  });
-
-  var obs=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});
-  },{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
-  document.querySelectorAll('.fade-up').forEach(function(el){obs.observe(el);});
-
-  var sObs=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){
-        e.target.querySelectorAll('[data-target]').forEach(function(el){
-          var t=parseFloat(el.dataset.target),s=el.dataset.suffix,st=null;
-          (function run(ts){if(!st)st=ts;var p=Math.min((ts-st)/1800,1),ease=1-Math.pow(1-p,3);
-            el.textContent=(t===0?'0':Math.round(ease*t))+s;if(p<1)requestAnimationFrame(run);})(performance.now());
-        });
-        sObs.unobserve(e.target);
-      }
-    });
-  },{threshold:0.3});
-  var sg=document.getElementById('statsGrid');
-  if(sg)sObs.observe(sg);
-
-  /* Canvas — subtle orange particles on light background */
-  var canvas=document.getElementById('hero-canvas');
-  var ctx=canvas.getContext('2d');
-  function resize(){canvas.width=canvas.parentElement.offsetWidth;canvas.height=canvas.parentElement.offsetHeight;}
-  resize();
-  window.addEventListener('resize',resize,{passive:true});
-  var pts=[];
-  for(var i=0;i<50;i++)pts.push({
-    x:Math.random()*canvas.width,
-    y:Math.random()*canvas.height,
-    vx:(Math.random()-.5)*.25,
-    vy:(Math.random()-.5)*.15-.05,
-    r:Math.random()*1.4+.4,
-    o:Math.random()*.12+.04,
-    g:Math.random()>.4
-  });
-  function draw(){
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    pts.forEach(function(p){
-      p.x+=p.vx;p.y+=p.vy;
-      if(p.x<0)p.x=canvas.width;if(p.x>canvas.width)p.x=0;
-      if(p.y<0)p.y=canvas.height;if(p.y>canvas.height)p.y=0;
-      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle=p.g?'rgba(217,119,87,'+p.o+')':'rgba(184,92,53,'+(p.o*.6)+')';
-      ctx.fill();
-    });
-    requestAnimationFrame(draw);
-  }
-  draw();
-})();
+}
+const statsObserver=new IntersectionObserver(entries=>{
+  if(entries[0].isIntersecting){animateStats();statsObserver.disconnect();}
+},{threshold:.3});
+const statsGrid=document.getElementById('statsGrid');
+if(statsGrid)statsObserver.observe(statsGrid);
 </script>
 </body>
 </html>
