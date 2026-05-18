@@ -48,8 +48,8 @@ nav.scrolled{border-bottom-color:var(--border);box-shadow:0 2px 24px rgba(28,20,
 .nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:var(--orange);transition:width .25s;}
 .nav-links a:hover{color:var(--orange);}
 .nav-links a:hover::after{width:100%;}
-.nav-cta-btn{background:transparent!important;border:1px solid var(--border)!important;color:var(--orange)!important;padding:8px 18px;transition:all .25s!important;}
-.nav-cta-btn:hover{background:var(--orange)!important;color:#fff!important;border-color:var(--orange)!important;}
+.nav-cta-btn{background:var(--orange)!important;border:1px solid var(--orange)!important;color:#fff!important;padding:8px 18px;box-shadow:0 8px 22px rgba(184,113,42,.22);transition:all .25s!important;}
+.nav-cta-btn:hover{background:var(--orange-lt)!important;color:#fff!important;border-color:var(--orange-lt)!important;transform:translateY(-1px);box-shadow:0 12px 28px rgba(184,113,42,.28);}
 .nav-cta-btn::after{display:none!important;}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
 .hamburger span{width:22px;height:1.5px;background:var(--orange);transition:.3s;display:block;}
@@ -282,9 +282,9 @@ footer{background:var(--dark);border-top:1px solid var(--border-lt);padding:32px
 .foot-logo{display:flex;align-items:center;gap:10px;font-family:'Cinzel',serif;font-size:.82rem;font-weight:700;letter-spacing:.18em;color:var(--silver);}
 .foot-logo span{color:var(--orange);}.foot-logo img{width:28px;height:28px;object-fit:contain;}
 .foot-links{display:flex;gap:22px;flex-wrap:wrap;}
-.foot-links a{font-size:.74rem;color:rgba(90,74,64,.5);text-decoration:none;letter-spacing:.06em;transition:color .2s;}
+.foot-links a{font-size:.82rem;color:rgba(20,16,14,.78);text-decoration:none;letter-spacing:.06em;transition:color .2s;}
 .foot-links a:hover{color:var(--orange);}
-.foot-copy{font-size:.7rem;color:rgba(90,74,64,.35);letter-spacing:.06em;}
+.foot-copy{font-size:.78rem;color:#000;letter-spacing:.06em;}
 
 /* ─── MODALS ─────────────────────────────────────── */
 .modal-backdrop{display:none;position:fixed;inset:0;background:rgba(28,20,16,.55);z-index:2000;align-items:center;justify-content:center;padding:24px;}
@@ -412,17 +412,17 @@ footer{
     <span class="logo-text">CERRONI <em>SOLUTIONS</em></span>
   </a>
   <ul class="nav-links">
-    <li><a href="about.html">About Us</a></li>
+    <li><a href="about.html">Chi siamo</a></li>
     <li><a href="faq.html">FAQ</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html">Contatti</a></li>
     <li><a href="https://calendly.com/cerronisolutions" class="nav-cta-btn" target="_blank" rel="noopener">Prenota Call</a></li>
   </ul>
   <div class="hamburger" id="hbg"><span></span><span></span><span></span></div>
 </nav>
 <div class="mob-menu" id="mobMenu">
-  <a href="about.html">About Us</a>
+  <a href="about.html">Chi siamo</a>
   <a href="faq.html">FAQ</a>
-  <a href="contact.html">Contact</a>
+  <a href="contact.html">Contatti</a>
   <a href="https://calendly.com/cerronisolutions" target="_blank" rel="noopener">Prenota Call →</a>
 </div>
 
@@ -877,7 +877,6 @@ footer{
 <footer>
   <div class="foot-logo"><img src="logo-mark.png" alt="Cerroni Solutions" width="28" height="28">CERRONI <span>SOLUTIONS</span></div>
   <div class="foot-links">
-    <a href="mailto:cerronisolutions@gmail.com">cerronisolutions@gmail.com</a>
     <a href="https://calendly.com/cerronisolutions" target="_blank" rel="noopener">Prenota Call</a>
     <a href="#" onclick="openModal('modal-privacy');return false;">Privacy Policy</a>
     <a href="#" onclick="openModal('modal-terms');return false;">Termini di Servizio</a>
