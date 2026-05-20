@@ -33,7 +33,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:66px;display:flex;al
 nav.scrolled{border-bottom-color:var(--border);box-shadow:0 2px 24px rgba(28,20,16,.07);}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
 .nav-logo img{width:38px;height:38px;flex-shrink:0;}
-.logo-text{font-family:'Cinzel',serif;font-size:.82rem;font-weight:700;letter-spacing:.2em;color:var(--white);}
+.logo-text{font-family:'Cinzel',serif;font-size:.82rem;font-weight:700;letter-spacing:.2em;color:#000000;}
 .logo-text em{color:var(--orange);font-style:normal;}
 .nav-links{display:flex;list-style:none;gap:32px;align-items:center;}
 .nav-links a{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--silver);text-decoration:none;transition:color .2s;position:relative;}
@@ -41,8 +41,14 @@ nav.scrolled{border-bottom-color:var(--border);box-shadow:0 2px 24px rgba(28,20,
 .nav-links a:hover,.nav-links a.active{color:var(--orange);}
 .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
 .nav-cta-btn{background:var(--orange)!important;border:1px solid var(--orange)!important;color:#fff!important;padding:8px 18px;box-shadow:0 8px 22px rgba(184,113,42,.22);transition:all .25s!important;}
-.nav-cta-btn:hover{background:var(--orange-lt)!important;color:#fff!important;border-color:var(--orange-lt)!important;transform:translateY(-1px);box-shadow:0 12px 28px rgba(184,113,42,.28);}
+.nav-cta-btn:hover{background:var(--orange-lt)!important;color:#fff!important;border-color:var(--orange-lt)!important;transform:translateY(-1px);}
 .nav-cta-btn::after{display:none!important;}
+@keyframes borderLight{
+  0%,100%{box-shadow:0 0 0 1px rgba(255,220,100,.55),0 0 14px rgba(240,196,48,.45),0 0 32px rgba(212,160,32,.2),0 8px 22px rgba(184,113,42,.25);}
+  50%{box-shadow:0 0 0 1px rgba(255,240,160,.9),0 0 22px rgba(255,220,80,.7),0 0 50px rgba(240,196,48,.35),0 10px 28px rgba(184,113,42,.3);}
+}
+.btn-gold,.nav-cta-btn{animation:borderLight 2.8s ease-in-out infinite!important;}
+.btn-gold:hover,.nav-cta-btn:hover{animation-duration:1.4s!important;}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
 .hamburger span{width:22px;height:1.5px;background:var(--orange);transition:.3s;display:block;}
 .hamburger.active span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
@@ -102,6 +108,70 @@ section{padding:90px 5%;}
 .included-item{border:1px solid var(--ink2);background:#fff;padding:28px 30px;}
 .included-item h3{font-family:'Cinzel',serif;font-size:.95rem;color:var(--white);margin-bottom:10px;}
 .included-item p{font-size:.86rem;color:var(--silver);line-height:1.7;}
+
+/* ── LEATHER CORD DIVIDER ── */
+.leather-cord{
+  position:relative;
+  height:20px;
+  background:linear-gradient(180deg,
+    #140803 0%,
+    #4A2210 14%,
+    #7A3E1C 30%,
+    #9C5228 44%,
+    #A85C2E 50%,
+    #9C5228 56%,
+    #7A3E1C 70%,
+    #4A2210 86%,
+    #140803 100%);
+  box-shadow:
+    0 -4px 8px rgba(0,0,0,.28),
+    0  4px 8px rgba(0,0,0,.28),
+    inset 0 1px 0 rgba(255,200,120,.12),
+    inset 0 -1px 0 rgba(0,0,0,.45);
+  z-index:2;
+  overflow:hidden;
+}
+/* grain diagonale */
+.leather-cord::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    repeating-linear-gradient(
+      112deg,
+      transparent,
+      transparent 10px,
+      rgba(0,0,0,.07) 10px,
+      rgba(0,0,0,.07) 11px
+    ),
+    repeating-linear-gradient(
+      68deg,
+      transparent,
+      transparent 16px,
+      rgba(255,255,255,.025) 16px,
+      rgba(255,255,255,.025) 17px
+    );
+}
+/* cucitura dorata a punti */
+.leather-cord::before{
+  content:'';
+  position:absolute;
+  top:50%;
+  left:0;
+  right:0;
+  height:2px;
+  transform:translateY(-50%);
+  background-image:repeating-linear-gradient(
+    90deg,
+    rgba(240,196,48,.92) 0px,
+    rgba(240,196,48,.92) 8px,
+    transparent 8px,
+    transparent 13px
+  );
+  background-size:13px 2px;
+  background-repeat:repeat-x;
+  filter:drop-shadow(0 0 3px rgba(212,160,32,.55));
+}
 
 #cta-band{background:var(--dark);border-top:1px solid var(--border-lt);border-bottom:1px solid var(--border-lt);text-align:center;padding:80px 5%;}
 .cta-band-inner{max-width:620px;margin:0 auto;}
@@ -268,7 +338,7 @@ h1.page-title em,#cta-band h2 em{
     <p class="page-sub fade-up d2">Non gestiamo singole attivita scollegate. Costruiamo un sistema completo che parte dal posizionamento, crea domanda qualificata e accompagna il potenziale cliente fino alla call.</p>
   </div>
 </div>
-
+<div class="leather-cord" aria-hidden="true"></div>
 <section id="strategy">
   <div class="sec-wrap">
     <div class="intro-grid">
@@ -293,7 +363,7 @@ h1.page-title em,#cta-band h2 em{
     </div>
   </div>
 </section>
-
+<div class="leather-cord" aria-hidden="true"></div>
 <section id="service-stack">
   <div class="sec-wrap">
     <div class="fade-up" style="text-align:center;">
@@ -338,7 +408,7 @@ h1.page-title em,#cta-band h2 em{
     </div>
   </div>
 </section>
-
+<div class="leather-cord" aria-hidden="true"></div>
 <section id="process">
   <div class="sec-wrap">
     <span class="sec-label">Metodo</span>
@@ -368,7 +438,7 @@ h1.page-title em,#cta-band h2 em{
     </div>
   </div>
 </section>
-
+<div class="leather-cord" aria-hidden="true"></div>
 <section id="included">
   <div class="sec-wrap">
     <div class="fade-up">
@@ -396,7 +466,7 @@ h1.page-title em,#cta-band h2 em{
     </div>
   </div>
 </section>
-
+<div class="leather-cord" aria-hidden="true"></div>
 <section id="cta-band">
   <div class="cta-band-inner fade-up">
     <h2>Vuoi capire quale sistema<br><em>serve alla tua attivita?</em></h2>
@@ -404,7 +474,7 @@ h1.page-title em,#cta-band h2 em{
     <a href="https://calendly.com/cerronisolutions" class="btn-gold" target="_blank" rel="noopener">Prenota la tua Call Gratuita →</a>
   </div>
 </section>
-
+<div class="leather-cord" aria-hidden="true"></div>
 <footer>
   <div class="foot-logo"><img src="logo-mark.png" alt="Cerroni Solutions" width="28" height="28">CERRONI <span>SOLUTIONS</span></div>
   <div class="foot-links">
