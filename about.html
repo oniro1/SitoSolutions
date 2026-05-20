@@ -77,7 +77,8 @@ section{padding:90px 5%;}
 /* MISSION */
 #mission{background:var(--black);}
 .mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
-.mission-img{width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border);display:block;}
+.mission-img{width:100%;aspect-ratio:4/3;border-radius:28px;border:1px solid var(--border);background:linear-gradient(135deg, rgba(255,255,255,.1), rgba(248,210,156,.12) 52%, rgba(28,20,16,.8));position:relative;overflow:hidden;}
+.mission-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 25% 25%, rgba(255,255,255,.22), transparent 24%), radial-gradient(circle at 80% 20%, rgba(255,214,156,.14), transparent 22%), radial-gradient(circle at 50% 75%, rgba(255,255,255,.08), transparent 18%);}
 .mission-text p{font-size:.95rem;color:var(--silver);line-height:1.85;margin-bottom:18px;}
 .mission-text p strong{color:var(--white);font-weight:600;}
 
@@ -96,7 +97,9 @@ section{padding:90px 5%;}
 .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
 .team-card{background:var(--dark-2);border:1px solid var(--ink2);overflow:hidden;transition:border-color .25s;}
 .team-card:hover{border-color:var(--border);}
-.team-img{width:100%;aspect-ratio:1;object-fit:cover;object-position:top;display:block;filter:grayscale(20%);}
+.team-img{width:100%;aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg, rgba(255,214,156,.15), rgba(28,20,16,.88));position:relative;}
+.team-img span{font-family:'Cinzel',serif;font-size:1.4rem;font-weight:700;color:#FFF;letter-spacing:.2em;z-index:1;}
+.team-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 25%, rgba(255,255,255,.18), transparent 18%), radial-gradient(circle at 75% 75%, rgba(255,214,156,.14), transparent 20%);}
 .team-info{padding:24px 28px;}
 .team-name{font-family:'Cinzel',serif;font-size:.95rem;font-weight:700;color:var(--white);letter-spacing:.04em;margin-bottom:4px;}
 .team-role{font-size:.74rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:14px;}
@@ -274,7 +277,7 @@ footer{
   <div class="sec-wrap">
     <div class="mission-grid">
       <div class="fade-up">
-        <img class="mission-img" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&auto=format&fit=crop&q=80" alt="Marketing strategy">
+        <div class="mission-img"></div>
       </div>
       <div class="mission-text fade-up d1">
         <span class="sec-label">La Nostra Missione</span>
@@ -341,7 +344,7 @@ footer{
     </div>
     <div class="team-grid">
       <div class="team-card fade-up d1">
-        <img class="team-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&auto=format&fit=crop&q=80" alt="Piergiorgio Cerroni">
+        <div class="team-img"><span>PC</span></div>
         <div class="team-info">
           <div class="team-name">Piergiorgio Cerroni</div>
           <div class="team-role">Founder & Stratega</div>
@@ -349,7 +352,7 @@ footer{
         </div>
       </div>
       <div class="team-card fade-up d2">
-        <img class="team-img" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&auto=format&fit=crop&q=80" alt="Content Strategist">
+        <div class="team-img"><span>SM</span></div>
         <div class="team-info">
           <div class="team-name">Sara M.</div>
           <div class="team-role">Content Strategist</div>
@@ -357,7 +360,7 @@ footer{
         </div>
       </div>
       <div class="team-card fade-up d3">
-        <img class="team-img" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&auto=format&fit=crop&q=80" alt="Ads Specialist">
+        <div class="team-img"><span>LB</span></div>
         <div class="team-info">
           <div class="team-name">Luca B.</div>
           <div class="team-role">Advertising Specialist</div>
