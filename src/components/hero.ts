@@ -52,18 +52,18 @@ export function initHero(): void {
 
   const geometry = new THREE.TorusKnotGeometry(1.1, 0.32, 160, 24)
   const material = new THREE.MeshPhysicalMaterial({
-    color: 0xead8c2,
-    metalness: 0.82,
-    roughness: 0.14,
-    clearcoat: 0.85,
-    clearcoatRoughness: 0.12,
-    reflectivity: 0.8,
-    transmission: 0.16,
-    thickness: 0.65,
-    envMapIntensity: 1.1,
-    ior: 1.5,
-    sheen: 0.2,
-    sheenColor: new THREE.Color(0xffd7ae)
+    color: 0xffffff,
+    metalness: 0.18,
+    roughness: 0.08,
+    clearcoat: 1.0,
+    clearcoatRoughness: 0.06,
+    reflectivity: 1.0,
+    transmission: 0.22,
+    thickness: 0.8,
+    envMapIntensity: 1.4,
+    ior: 1.6,
+    sheen: 0.15,
+    sheenColor: new THREE.Color(0xe8f0ff)
   })
 
   const sculpture = new THREE.Mesh(geometry, material)
@@ -75,11 +75,11 @@ export function initHero(): void {
   const ring = new THREE.Mesh(
     new THREE.TorusGeometry(1.75, 0.03, 40, 120),
     new THREE.MeshStandardMaterial({
-      color: 0xffc47e,
-      metalness: 0.45,
-      roughness: 0.2,
+      color: 0xf0f4ff,
+      metalness: 0.3,
+      roughness: 0.15,
       transparent: true,
-      opacity: 0.68
+      opacity: 0.55
     })
   )
   ring.rotation.x = Math.PI / 2

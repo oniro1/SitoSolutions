@@ -67,12 +67,12 @@ nav.scrolled{border-bottom-color:var(--border);box-shadow:0 2px 24px rgba(28,20,
 /* FAQ */
 #faq-section{padding:80px 5% 120px;}
 .faq-wrap{max-width:800px;margin:0 auto;}
-.faq-category{margin-bottom:56px;}
+.faq-category{margin-bottom:56px;display:flex;flex-direction:column;gap:12px;}
 .faq-category-label{font-size:.67rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--orange);margin-bottom:24px;display:flex;align-items:center;gap:10px;}
 .faq-category-label::before{content:'';width:28px;height:1px;background:var(--orange);}
-.faq-item{border-bottom:1px solid var(--border-lt);}
-.faq-item:first-of-type{border-top:1px solid var(--border-lt);}
-.faq-question{width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0;background:none;border:none;cursor:pointer;text-align:left;font-family:'Cinzel',serif;font-size:.95rem;font-weight:600;color:var(--white);letter-spacing:.03em;transition:color .2s;}
+.faq-item{}
+.faq-item:first-of-type{}
+.faq-question{width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 28px;background:none;border:none;cursor:pointer;text-align:left;font-family:'Cinzel',serif;font-size:.95rem;font-weight:600;color:var(--white);letter-spacing:.03em;transition:color .2s;}
 .faq-question:hover{color:var(--orange);}
 .faq-icon{flex-shrink:0;width:20px;height:20px;position:relative;transition:transform .3s;}
 .faq-icon::before,.faq-icon::after{content:'';position:absolute;background:var(--orange);border-radius:1px;transition:.3s;}
@@ -80,7 +80,7 @@ nav.scrolled{border-bottom-color:var(--border);box-shadow:0 2px 24px rgba(28,20,
 .faq-icon::after{width:14px;height:2px;top:9px;left:3px;}
 .faq-item.open .faq-icon{transform:rotate(45deg);}
 .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease;}
-.faq-answer-inner{padding-bottom:22px;font-size:.9rem;color:var(--silver);line-height:1.85;}
+.faq-answer-inner{padding:0 28px 14px;font-size:.9rem;color:var(--silver);line-height:1.85;}
 .faq-answer-inner strong{color:var(--white);font-weight:600;}
 .faq-item.open .faq-answer{max-height:400px;}
 
@@ -191,16 +191,22 @@ footer{
 }
 .faq-icon::before,.faq-icon::after{background:#fff3a6 !important;box-shadow:0 1px 1px rgba(60,32,4,.45);}
 .faq-item.open .faq-icon{transform:perspective(620px) rotateX(12deg) rotateY(-14deg) rotateZ(45deg);}
-.faq-item,.faq-cta{
+@keyframes faqBorderShimmer{
+  0%,100%{box-shadow:inset 10px 12px 22px rgba(255,255,255,.70),inset -8px -10px 18px rgba(76,86,94,.10),0 8px 24px rgba(72,78,84,.12),0 0 0 1px rgba(184,113,42,.45),0 0 14px rgba(184,113,42,.18);}
+  50%{box-shadow:inset 10px 12px 22px rgba(255,255,255,.70),inset -8px -10px 18px rgba(76,86,94,.10),0 8px 24px rgba(72,78,84,.12),0 0 0 1px rgba(255,220,80,.90),0 0 26px rgba(240,196,48,.38);}
+}
+.faq-item{
   background:
-    radial-gradient(ellipse at 24% 18%,rgba(255,255,255,.98) 0%,rgba(244,247,247,.95) 24%,rgba(181,190,196,.96) 54%,rgba(112,121,128,.92) 82%,rgba(232,236,237,.94) 100%) !important;
-  border:1px solid rgba(255,255,255,.78) !important;
+    radial-gradient(ellipse at 24% 18%,rgba(255,255,255,.98) 0%,rgba(248,250,250,.96) 28%,rgba(215,222,226,.93) 58%,rgba(200,210,215,.90) 82%,rgba(232,236,237,.94) 100%) !important;
+  border:1px solid rgba(184,113,42,.55) !important;
   border-radius:24px;
-  box-shadow:
-    inset 18px 20px 34px rgba(255,255,255,.78),
-    inset -22px -24px 34px rgba(76,86,94,.34),
-    0 18px 34px rgba(72,78,84,.18),
-    0 2px 0 rgba(255,255,255,.7) !important;
+  animation:faqBorderShimmer 3s ease-in-out infinite !important;
+}
+.faq-cta{
+  background:
+    radial-gradient(ellipse at 24% 18%,rgba(255,255,255,.98) 0%,rgba(248,250,250,.96) 28%,rgba(215,222,226,.93) 58%,rgba(200,210,215,.90) 82%,rgba(232,236,237,.94) 100%) !important;
+  border:1px solid rgba(184,113,42,.55) !important;
+  border-radius:24px;
 }
 .btn-gold,.nav-cta-btn,.gold-rule,.eyebrow-line,.faq-category-label::before{
   background:linear-gradient(135deg,#7b470f 0%,#c58a25 24%,#fff3a6 48%,#c58a25 70%,#6f3f0c 100%) !important;
@@ -215,25 +221,21 @@ footer{
 
 /* ── BUTTON: metallic shimmer + holo ─────────────────────────────── */
 @keyframes metalBtnShimmer{0%{background-position:-200% center;}100%{background-position:200% center;}}
-@keyframes holoBtnShimmer{0%{transform:translateX(-180%) skewX(-20deg);opacity:.55;}100%{transform:translateX(280%) skewX(-20deg);opacity:.55;}}
-@keyframes borderLight{
-  0%,100%{box-shadow:0 0 0 1px rgba(255,220,100,.55),0 0 14px rgba(240,196,48,.45),0 0 32px rgba(212,160,32,.2),0 8px 22px rgba(184,113,42,.25);}
-  50%{box-shadow:0 0 0 1px rgba(255,240,160,.9),0 0 22px rgba(255,220,80,.7),0 0 50px rgba(240,196,48,.35),0 10px 28px rgba(184,113,42,.3);}
-}
-@keyframes silverBadgeShimmer{0%{transform:translateX(-160%) skewX(-18deg);}100%{transform:translateX(260%) skewX(-18deg);}}
-@keyframes goldBallShimmer{0%{transform:translateX(-160%) skewX(-22deg);}100%{transform:translateX(260%) skewX(-22deg);}}
+@keyframes borderLight{0%,100%{box-shadow:0 0 0 1px rgba(184,113,42,.60),0 0 8px rgba(212,160,32,.30),0 0 22px rgba(184,113,42,.15),inset 0 0 0 1px rgba(255,200,80,.08);}50%{box-shadow:0 0 0 1px rgba(255,220,80,.95),0 0 18px rgba(240,196,48,.65),0 0 40px rgba(212,160,32,.35),0 0 70px rgba(184,113,42,.18),inset 0 0 0 1px rgba(255,220,80,.12);}}
+@keyframes silverBadgeShimmer{0%{background-position:-80% center;}100%{background-position:180% center;}}
+@keyframes goldBallShimmer{0%{background-position:-80% center;}100%{background-position:180% center;}}
 /* Btn gold override */
 .btn-gold{background:linear-gradient(90deg,#6B3A0E 0%,#B8712A 15%,#D4A020 28%,#F0CC40 40%,#FFF8C0 50%,#F0CC40 60%,#D4A020 72%,#B8712A 85%,#6B3A0E 100%)!important;background-size:250% 100%!important;color:#1A0C04!important;text-shadow:0 1px 0 rgba(255,240,180,.6),0 -1px 0 rgba(60,20,0,.25)!important;animation:metalBtnShimmer 2.2s linear infinite,borderLight 2.8s ease-in-out infinite!important;overflow:hidden!important;position:relative!important;}
-.btn-gold::before{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 0%,rgba(255,200,80,0) 22%,rgba(180,255,220,.28) 34%,rgba(120,200,255,.32) 42%,rgba(200,140,255,.28) 50%,rgba(255,160,180,.26) 58%,rgba(255,220,80,.22) 68%,rgba(255,200,80,0) 80%,transparent 100%);animation:holoBtnShimmer 3.8s ease-in-out infinite;pointer-events:none;z-index:1;}
+
 .btn-gold:hover{transform:translateY(-2px);animation-duration:1.2s,1.4s!important;}
-.btn-gold,.btn-outline,.nav-cta-btn,.float-cta a{animation:borderLight 2.8s ease-in-out infinite!important;}
+.btn-gold,.nav-cta-btn,.float-cta a{animation:metalBtnShimmer 2.2s linear infinite,borderLight 2.8s ease-in-out infinite!important;}
 .btn-gold{animation:metalBtnShimmer 2.2s linear infinite,borderLight 2.8s ease-in-out infinite!important;}
 .btn-gold:hover,.btn-outline:hover,.nav-cta-btn:hover,.float-cta a:hover{animation-duration:1.4s!important;}
 /* Silver badge shimmer */
 .step-num,.serv-num,.sol-num,.service-num{position:relative;overflow:hidden;}
-.step-num::after,.serv-num::after,.sol-num::after,.service-num::after{content:'';position:absolute;top:-10%;left:0;width:45%;height:120%;background:linear-gradient(105deg,transparent 0%,rgba(255,255,255,0) 25%,rgba(255,255,255,.65) 46%,rgba(240,245,255,.85) 50%,rgba(255,255,255,.65) 54%,rgba(255,255,255,0) 75%,transparent 100%);animation:silverBadgeShimmer 3.2s ease-in-out infinite;pointer-events:none;border-radius:999px;}
+.step-num::after,.serv-num::after,.sol-num::after,.service-num::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 0%,rgba(255,255,255,0) 25%,rgba(255,255,255,.65) 42%,rgba(240,245,255,.88) 50%,rgba(255,255,255,.65) 58%,rgba(255,255,255,0) 75%,transparent 100%);background-size:260% 100%;animation:silverBadgeShimmer 3.2s ease-in-out infinite;pointer-events:none;border-radius:999px;}
 /* Gold ball shimmer */
-.pain-icon-wrap::before,.sol-icon::before,.serv-icon::before,.benef-icon::before{content:'';position:absolute;top:0;left:0;width:38%;height:100%;background:linear-gradient(105deg,transparent 0%,rgba(255,255,220,0) 18%,rgba(255,255,200,.72) 44%,rgba(255,255,255,.92) 50%,rgba(255,255,200,.72) 56%,rgba(255,255,220,0) 82%,transparent 100%);animation:goldBallShimmer 3s ease-in-out infinite;pointer-events:none;border-radius:inherit;z-index:3;}
+.pain-icon-wrap::before,.sol-icon::before,.serv-icon::before,.benef-icon::before{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 0%,rgba(255,255,220,0) 18%,rgba(255,255,200,.72) 40%,rgba(255,255,255,.92) 50%,rgba(255,255,200,.72) 60%,rgba(255,255,220,0) 82%,transparent 100%);background-size:280% 100%;animation:goldBallShimmer 3s ease-in-out infinite;pointer-events:none;border-radius:inherit;z-index:3;}
 
 /* ══════════════════════════════════════════════
    MOBILE OPTIMIZATION
@@ -354,6 +356,41 @@ footer{
   .sec-title{font-size:1.3rem!important;}
   .btn-gold,.btn-outline{padding:12px 20px;font-size:.74rem!important;}
   .step-card,.serv-card,.pain-card{padding:24px 16px;}
+}
+/* ── WHITE TEXT ON DARK CARDS ───────────────────────────────── */
+.pain-card h3,.sol-card h3,.step-card h3,.serv-card h3,.benef-item h4,
+.testi-name,.prob-result p,.fcta-title,.vb-quote,.modal-head h2,.modal-body h3{
+  color:#FAF8F4!important;-webkit-text-fill-color:#FAF8F4!important;
+}
+.pain-card p,.sol-card p,.step-card p,.serv-card p,.serv-list li,
+.testi-text,.stat-l,.fcta-sub,.sol-tagline,.disc,.benef-tagline p,
+.modal-close,.modal-body,.modal-body p,.sol-tagline,.serv-intro-text{
+  color:#C4B5A5!important;-webkit-text-fill-color:#C4B5A5!important;
+}
+.sec-sub{color:#3A2A1A!important;-webkit-text-fill-color:#3A2A1A!important;}
+
+
+.float-cta a{position:relative;overflow:hidden;}
+
+
+/* ── GOLDEN BORDERS ON GLASS CARDS ──────────────────────────── */
+@keyframes cardBorderGlow{
+  0%,100%{box-shadow:
+    inset 10px 12px 22px rgba(255,255,255,.70),
+    inset -8px -10px 18px rgba(76,86,94,.10),
+    0 8px 24px rgba(72,78,84,.10),
+    0 0 0 1px rgba(184,113,42,.40),
+    0 0 12px rgba(184,113,42,.14);}
+  50%{box-shadow:
+    inset 10px 12px 22px rgba(255,255,255,.70),
+    inset -8px -10px 18px rgba(76,86,94,.10),
+    0 8px 24px rgba(72,78,84,.10),
+    0 0 0 1px rgba(255,220,80,.88),
+    0 0 24px rgba(240,196,48,.32);}
+}
+.step-card,.serv-card,.sol-card,.pain-card,.service-card,.process-step{
+  border:1px solid rgba(184,113,42,.45) !important;
+  animation:cardBorderGlow 3s ease-in-out infinite !important;
 }
 </style>
 </head>
