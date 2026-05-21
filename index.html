@@ -526,6 +526,127 @@ footer{
 .step-num::after,.serv-num::after,.sol-num::after,.service-num::after{content:'';position:absolute;top:-10%;left:0;width:45%;height:120%;background:linear-gradient(105deg,transparent 0%,rgba(255,255,255,0) 25%,rgba(255,255,255,.65) 46%,rgba(240,245,255,.85) 50%,rgba(255,255,255,.65) 54%,rgba(255,255,255,0) 75%,transparent 100%);animation:silverBadgeShimmer 3.2s ease-in-out infinite;pointer-events:none;border-radius:999px;}
 /* Gold ball shimmer */
 .pain-icon-wrap::before,.sol-icon::before,.serv-icon::before,.benef-icon::before{content:'';position:absolute;top:0;left:0;width:38%;height:100%;background:linear-gradient(105deg,transparent 0%,rgba(255,255,220,0) 18%,rgba(255,255,200,.72) 44%,rgba(255,255,255,.92) 50%,rgba(255,255,200,.72) 56%,rgba(255,255,220,0) 82%,transparent 100%);animation:goldBallShimmer 3s ease-in-out infinite;pointer-events:none;border-radius:inherit;z-index:3;}
+
+/* ══════════════════════════════════════════════
+   MOBILE OPTIMIZATION
+   ══════════════════════════════════════════════ */
+
+/* ── Tablet (≤860px) ── */
+@media(max-width:860px){
+  section{padding:72px 5%;}
+  .page-hero{padding:110px 5% 60px;}
+  .sec-title{font-size:clamp(1.5rem,5vw,2.2rem);}
+  .hero-h{font-size:clamp(2.6rem,7vw,4rem)!important;}
+  .hero-sub{font-size:.96rem;}
+  .hero-ctas{gap:12px;}
+  .btn-gold,.btn-outline{padding:13px 26px;font-size:.78rem!important;}
+  .step-card{padding:32px 22px 26px;}
+  .serv-card{padding:36px 24px;}
+  .pain-card{padding:32px 24px;}
+  .testi-card{padding:30px 24px;}
+  .stat-card{padding:40px 20px;}
+  .stat-n{font-size:2.8rem;}
+  .perchi-card{padding:30px 24px;}
+  .step-num,.serv-num,.sol-num,.service-num{min-width:72px;height:58px;font-size:2rem;}
+  .steps-horiz{gap:14px;}
+  .serv-grid{gap:14px;}
+  .testi-grid{gap:14px;}
+  .benef-item{padding:36px 12px 28px;}
+  .benef-icon{width:52px;height:52px;}
+  .sec-label{font-size:.62rem;}
+  .float-cta a{font-size:.7rem;padding:10px 18px;}
+}
+
+/* ── Mobile (≤560px) ── */
+@media(max-width:560px){
+  section{padding:56px 4%;}
+  .page-hero{padding:100px 4% 50px;}
+
+  /* Typography */
+  .sec-title{font-size:clamp(1.35rem,6vw,1.9rem)!important;}
+  .hero-h{font-size:clamp(2rem,9vw,2.8rem)!important;}
+  .sec-sub{font-size:.9rem;}
+  .prob-statement{font-size:clamp(1rem,4vw,1.3rem);}
+
+  /* Buttons full-width on mobile */
+  .hero-ctas{flex-direction:column;align-items:stretch;}
+  .hero-ctas .btn-gold,.hero-ctas .btn-outline{justify-content:center;text-align:center;}
+  .fcta-btns{flex-direction:column;align-items:stretch;}
+  .fcta-btns .btn-gold{justify-content:center;}
+
+  /* Cards */
+  .step-card{padding:28px 18px 22px;border-radius:18px;}
+  .serv-card{padding:30px 20px;border-radius:18px;}
+  .pain-card{padding:28px 20px;border-radius:18px;}
+  .testi-card{padding:26px 20px;border-radius:18px;}
+  .stat-card{padding:36px 16px;}
+  .perchi-card{padding:26px 18px;}
+  .step-tag{font-size:.74rem;}
+
+  /* Badges */
+  .step-num,.serv-num,.sol-num,.service-num{
+    min-width:60px;height:48px;padding:0 14px;
+    font-size:1.6rem;transform:none;
+  }
+
+  /* Stats */
+  .stat-n{font-size:2.4rem;}
+  .stats-grid{gap:1px;}
+
+  /* Benefits */
+  .benef-item{min-width:100%;padding:28px 16px 22px;}
+  .benef-item h4{font-size:.72rem;}
+
+  /* Testimonials */
+  .testi-quote{font-size:3.5rem;top:14px;right:16px;}
+
+  /* Nav & float */
+  .scar-badge{font-size:.7rem;padding:9px 18px;letter-spacing:.12em;}
+  .float-cta{bottom:12px;right:12px;}
+  .float-cta a{font-size:.68rem;padding:9px 16px;}
+
+  /* Footer */
+  .foot-logo{font-size:.74rem;}
+  .foot-links{gap:14px;flex-wrap:wrap;justify-content:center;}
+  .foot-links a{font-size:.74rem;}
+  .foot-copy{font-size:.7rem;text-align:center;}
+
+  /* Marquee */
+  .marquee-item{font-size:.65rem;letter-spacing:.16em;}
+
+  /* Perchi section */
+  .perchi-section{padding:16px;border-radius:18px;transform:none;}
+  .perchi-hdr h3{font-size:.8rem;}
+  .perchi-list li{font-size:.86rem;}
+
+  /* Visual break */
+  #visual-break{padding:90px 4%;}
+  .vb-quote{font-size:clamp(1.4rem,5.5vw,2rem);}
+
+  /* Final CTA */
+  #final-cta{padding:60px 4%;}
+  .fcta-title{font-size:clamp(1.6rem,6vw,2.4rem);}
+  .scar-badge{display:flex;justify-content:center;text-align:center;}
+
+  /* Hero trust pills */
+  .hero-trust{flex-wrap:wrap;gap:8px;}
+  .trust-item{font-size:.74rem;padding:8px 12px;}
+
+  /* Sol grid fix */
+  .sol-grid{grid-template-columns:1fr;}
+
+  /* Modal */
+  .modal-box{padding:32px 22px;}
+}
+
+/* ── Small mobile (≤380px) ── */
+@media(max-width:380px){
+  section{padding:48px 4%;}
+  .hero-h{font-size:1.9rem!important;}
+  .sec-title{font-size:1.3rem!important;}
+  .btn-gold,.btn-outline{padding:12px 20px;font-size:.74rem!important;}
+  .step-card,.serv-card,.pain-card{padding:24px 16px;}
+}
 </style>
 </head>
 <body>
