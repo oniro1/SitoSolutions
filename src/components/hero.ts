@@ -1,6 +1,9 @@
 import * as THREE from 'three'
 
 export function initHero(): void {
+  // Skip WebGL on mobile — saves battery and avoids performance issues
+  if (window.matchMedia('(max-width: 860px)').matches) return
+
   const canvas = document.getElementById('hero-canvas') as HTMLCanvasElement | null
   if (!canvas) return
   const canvasEl = canvas
