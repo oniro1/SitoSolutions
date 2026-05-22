@@ -9,7 +9,7 @@
 <title>Cerroni Solutions — Acquisizione Clienti High-Ticket</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
   /* Claude brand palette — light theme */
@@ -54,7 +54,7 @@ nav.scrolled{border-bottom-color:var(--border);box-shadow:0 2px 24px rgba(28,20,
 .nav-cta-btn:hover{background:var(--orange-lt)!important;color:#fff!important;border-color:var(--orange-lt)!important;transform:translateY(-1px);box-shadow:0 12px 28px rgba(184,113,42,.28);}
 @keyframes navButtonShimmer{0%{transform:translateX(-120%) rotate(25deg);}50%{transform:translateX(120%) rotate(25deg);}100%{transform:translateX(120%) rotate(25deg);}}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
-.hamburger span{width:22px;height:1.5px;background:var(--orange);transition:.3s;display:block;}
+.hamburger span{width:22px;height:1.5px;background:#1C1410;transition:.3s;display:block;}
 .hamburger.active span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
 .hamburger.active span:nth-child(2){opacity:0;}
 .hamburger.active span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
@@ -92,7 +92,7 @@ nav.scrolled{border-bottom-color:var(--border);box-shadow:0 2px 24px rgba(28,20,
 .eyebrow-text{font-size:.75rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--orange);}
 h1.hero-h{
   display:block;
-  font-family:'Cinzel',serif;font-size:clamp(3.8rem,6.5vw,6.8rem);font-weight:700;line-height:1.02;letter-spacing:-.03em;color:var(--white);margin-bottom:28px;
+  font-family:'Playfair Display',serif;font-size:clamp(3.8rem,6.5vw,6.8rem);font-weight:800;line-height:1.05;letter-spacing:-.01em;color:var(--white);margin-bottom:28px;
   padding:0;
   border-radius:0;
   background:none;
@@ -679,6 +679,83 @@ footer{
   border:1px solid rgba(184,113,42,.45) !important;
   animation:cardBorderGlow 3s ease-in-out infinite !important;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   HORIZONTAL HERO — index.html
+   To revert: delete everything between these two comments
+   ═══════════════════════════════════════════════════════════════ */
+.hero-content { display: flex !important; justify-content: center !important; }
+.hero-text {
+  display: grid !important;
+  grid-template-columns: 1.1fr 0.9fr !important;
+  gap: 64px !important;
+  align-items: center !important;
+  max-width: 1140px !important;
+  width: 100% !important;
+  padding: 64px 72px !important;
+}
+
+/* Left: title as pure backdrop, no extra margin */
+.hero-left  { display: flex; flex-direction: column; justify-content: center; }
+.hero-eyebrow { margin-bottom: 20px; }
+h1.hero-h {
+  margin-bottom: 0 !important;
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(2.8rem, 4.8vw, 5.4rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.05 !important;
+  letter-spacing: -.01em !important;
+}
+
+/* Right: tight stack with button as clear focal point */
+.hero-right {
+  display: flex; flex-direction: column; justify-content: center; gap: 0;
+  border-left: 1px solid rgba(255,255,255,.22);
+  padding-left: 56px;
+}
+.hero-sub {
+  margin: 0 0 36px !important;
+  font-size: 1.08rem !important;
+  line-height: 1.9 !important;
+  color: rgba(237,226,218,.92) !important;
+}
+/* Make the gold button larger and dominant */
+.hero-ctas .btn-gold {
+  padding: 20px 44px !important;
+  font-size: .88rem !important;
+  letter-spacing: .22em !important;
+  width: 100% !important;
+  justify-content: center !important;
+  margin-bottom: 4px !important;
+}
+.hero-ctas .btn-outline {
+  width: 100% !important;
+  justify-content: center !important;
+  padding: 14px 44px !important;
+  font-size: .78rem !important;
+}
+.hero-ctas { flex-direction: column !important; gap: 12px !important; margin-bottom: 36px !important; }
+
+/* Trust items as subtle pills */
+.hero-trust { flex-direction: column !important; align-items: flex-start !important; gap: 10px !important; }
+.trust-item {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: .78rem !important;
+  width: 100%;
+}
+.trust-sep { display: none !important; }
+
+@media (max-width: 860px) {
+  .hero-text  { grid-template-columns: 1fr !important; gap: 36px !important; padding: 40px 28px !important; }
+  .hero-right { border-left: none !important; padding-left: 0 !important; }
+  .hero-ctas .btn-gold, .hero-ctas .btn-outline { width: auto !important; }
+}
+/* ═══════════════════════════════════════════════════════════════
+   END HORIZONTAL HERO
+   ═══════════════════════════════════════════════════════════════ */
 </style>
 </head>
 <body>
@@ -713,27 +790,35 @@ footer{
   <div class="hero-grad"></div>
   <div class="hero-diag"></div>
   <div class="hero-content">
+    <!-- HORIZONTAL HERO -->
     <div class="hero-text">
-      <div class="hero-eyebrow fade-up">
-        <span class="eyebrow-line"></span>
-        <span class="eyebrow-text">Sistema di Acquisizione Clienti</span>
+      <!-- left col: eyebrow + title -->
+      <div class="hero-left">
+        <div class="hero-eyebrow fade-up">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Sistema di Acquisizione Clienti</span>
+        </div>
+        <h1 class="hero-h fade-up d1">
+          Trasforma contenuti e traffico in <span class="hl">clienti paganti</span>
+        </h1>
       </div>
-      <h1 class="hero-h fade-up d1">
-        Trasforma contenuti e traffico in <span class="hl">clienti paganti</span>
-      </h1>
-      <p class="hero-sub fade-up d2">Sistema strutturato per attività e professionisti high-ticket. Non visibilità generica — clienti reali, ogni mese.</p>
-      <div class="hero-ctas fade-up d3">
-        <a href="https://calendly.com/cerronisolutions" class="btn-gold" target="_blank" rel="noopener">Prenota una Consulenza →</a>
-        <a href="https://calendly.com/cerronisolutions" class="btn-outline" target="_blank" rel="noopener">Richiedi Analisi Gratuita</a>
-      </div>
-      <div class="hero-trust fade-up d4">
-        <div class="trust-item"><span class="trust-dot"></span>Pochi posti disponibili al mese</div>
-        <div class="trust-sep"></div>
-        <div class="trust-item"><span class="trust-dot"></span>Nessun vincolo a lungo termine</div>
-        <div class="trust-sep"></div>
-        <div class="trust-item"><span class="trust-dot"></span>Risultati entro <span class="trust-num">&nbsp;30&nbsp;</span>giorni</div>
+      <!-- right col: sub + ctas + trust -->
+      <div class="hero-right fade-up d2">
+        <p class="hero-sub">Sistema strutturato per attività e professionisti high-ticket. Non visibilità generica — clienti reali, ogni mese.</p>
+        <div class="hero-ctas">
+          <a href="https://calendly.com/cerronisolutions" class="btn-gold" target="_blank" rel="noopener">Prenota una Consulenza →</a>
+          <a href="https://calendly.com/cerronisolutions" class="btn-outline" target="_blank" rel="noopener">Richiedi Analisi Gratuita</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item"><span class="trust-dot"></span>Pochi posti disponibili al mese</div>
+          <div class="trust-sep"></div>
+          <div class="trust-item"><span class="trust-dot"></span>Nessun vincolo a lungo termine</div>
+          <div class="trust-sep"></div>
+          <div class="trust-item"><span class="trust-dot"></span>Risultati entro <span class="trust-num">&nbsp;30&nbsp;</span>giorni</div>
+        </div>
       </div>
     </div>
+    <!-- END HORIZONTAL HERO -->
   </div>
 </section>
 
@@ -1207,6 +1292,25 @@ footer{
 
 <!-- ── JAVASCRIPT ── -->
 <script>
+/* ── Hamburger menu ── */
+(function(){
+  const hbg=document.getElementById('hbg');
+  const mob=document.getElementById('mobMenu');
+  if(!hbg||!mob)return;
+  hbg.addEventListener('click',function(){
+    hbg.classList.toggle('active');
+    mob.classList.toggle('open');
+    document.body.style.overflow=mob.classList.contains('open')?'hidden':'';
+  });
+  mob.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      hbg.classList.remove('active');
+      mob.classList.remove('open');
+      document.body.style.overflow='';
+    });
+  });
+})();
+
 /* ── Modal ── */
 function openModal(id){
   const m=document.getElementById(id);
@@ -1347,22 +1451,4 @@ function closeCsModal(){
       h.dataset.wr='1';
       var out='';
       h.childNodes.forEach(function(node){
-        if(node.nodeType===3){
-          node.textContent.split(/(\s+)/).forEach(function(p){
-            out+=/\S/.test(p)?'<span class="wr-w" style="display:inline-block;opacity:0;transform:translateY(10px);transition:opacity .4s ease,transform .4s ease;">'+p+'</span>':p;
-          });
-        }else{out+=node.outerHTML||node.textContent;}
-      });
-      h.innerHTML=out;
-      h.querySelectorAll('.wr-w').forEach(function(w,i){
-        setTimeout(function(){w.style.opacity='1';w.style.transform='translateY(0)';},i*75);
-      });
-      obs.unobserve(h);
-    });
-  },{threshold:0.25});
-  document.querySelectorAll('h2.sec-title').forEach(function(h){obs.observe(h);});
-})();
-</script>
-<script type="module" src="/src/main.ts"></script>
-</body>
-</html>
+     

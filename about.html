@@ -413,6 +413,161 @@ footer{
   border:1px solid rgba(184,113,42,.45) !important;
   animation:cardBorderGlow 3s ease-in-out infinite !important;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   LEATHER THEME — about.html only
+   To revert: delete everything between these two comments
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Palette:
+   Brown Leather   #6B3A2A
+   Champagne Gold  #C5A55A
+   Silver          #B0B4BA
+   Charcoal        #2C2C30
+   Ivory           #F5EDE0
+   Burgundy        #7A1F2E
+*/
+
+:root {
+  --orange:      #C5A55A;   /* Champagne gold replaces orange */
+  --orange-lt:   #D4BB7A;
+  --orange-dk:   #9A7A35;
+  --black:       #2C2C30;   /* Charcoal — main background */
+  --dark-2:      #3A3A40;   /* Slightly lighter charcoal for cards */
+  --dark-3:      #44444A;
+  --white:       #F5EDE0;   /* Ivory — main text */
+  --silver:      #B0B4BA;   /* Brushed silver — secondary text */
+  --silver-light:#D8DCE0;
+  --green:       #7A1F2E;   /* Burgundy replaces green */
+  --red:         #7A1F2E;
+  --o10:         rgba(197,165,90,.10);
+  --o15:         rgba(197,165,90,.15);
+  --o20:         rgba(197,165,90,.20);
+  --o40:         rgba(197,165,90,.40);
+  --o60:         rgba(197,165,90,.60);
+  --border:      rgba(197,165,90,.22);
+  --border-lt:   rgba(197,165,90,.12);
+  --ink:         rgba(245,237,224,.06);
+  --ink2:        rgba(245,237,224,.10);
+}
+
+/* Background */
+body { background: #2C2C30 !important; color: #F5EDE0 !important; }
+
+/* Sections */
+.page-hero { background: #1E1E22 !important; }
+.section, .section-sm { background: #2C2C30 !important; }
+#mission   { background: #252528 !important; }
+#values    { background: #2C2C30 !important; }
+#team      { background: #252528 !important; }
+#numbers   { background: #1E1E22 !important; }
+#cta-band  { background: #6B3A2A !important; }  /* Brown leather for CTA */
+
+/* Navigation */
+nav { background: rgba(30,30,34,.96) !important; border-bottom-color: rgba(197,165,90,.15) !important; }
+.nav-links a, .mob-menu a { color: #B0B4BA !important; }
+.logo-text { color: #F5EDE0 !important; }
+
+/* Headings */
+h1, h2, h3, h4, .page-title, .sec-title { color: #F5EDE0 !important; -webkit-text-fill-color: #F5EDE0 !important; }
+.sec-sub { color: #B0B4BA !important; -webkit-text-fill-color: #B0B4BA !important; }
+
+/* Gold elements → Champagne */
+.gold-rule, .eyebrow-line { background: linear-gradient(90deg, #9A7A35, #C5A55A, #E8D080, #C5A55A, #9A7A35) !important; }
+.sec-label, .eyebrow-text { color: #C5A55A !important; -webkit-text-fill-color: #C5A55A !important; }
+
+/* Cards */
+.pain-card, .sol-card, .step-card, .serv-card, .benef-item,
+.testi-card, .stat-card, .prob-result, .arr-wrap {
+  background: linear-gradient(180deg, #3A3A40 0%, #2E2E34 100%) !important;
+  border-color: rgba(197,165,90,.30) !important;
+}
+.pain-card h3, .sol-card h3, .step-card h3, .serv-card h3,
+.benef-item h4, .testi-name, .stat-card .stat-num {
+  color: #F5EDE0 !important; -webkit-text-fill-color: #F5EDE0 !important;
+}
+.pain-card p, .sol-card p, .step-card p, .serv-card p,
+.testi-text, .stat-l { color: #B0B4BA !important; -webkit-text-fill-color: #B0B4BA !important; }
+
+/* Buttons */
+.btn-gold, .nav-cta-btn, .float-cta a {
+  background: linear-gradient(135deg, #9A7A35 0%, #C5A55A 30%, #E8D080 50%, #C5A55A 70%, #9A7A35 100%) !important;
+  color: #1E1E22 !important;
+}
+
+/* Leather cord — keep as-is, it fits the palette */
+
+/* Footer */
+footer { background: #1E1E22 !important; border-top-color: rgba(197,165,90,.15) !important; }
+.foot-logo, .foot-links a { color: #B0B4BA !important; }
+
+/* Numbers / badges */
+.step-num, .serv-num, .sol-num {
+  background: radial-gradient(circle at 30% 25%, #D8DCE0 0%, #B0B4BA 30%, #7A7E84 65%, #3A3E44 100%) !important;
+  -webkit-text-fill-color: #2C2C30 !important;
+}
+
+/* Burgundy accents */
+.perchi-card.yes .perchi-hdr h3 { color: #C5A55A !important; -webkit-text-fill-color: #C5A55A !important; }
+.perchi-card.no  .perchi-hdr h3 { color: #7A1F2E !important; -webkit-text-fill-color: #7A1F2E !important; }
+
+
+/* ── VALUE CARDS: dark text on silver glass ───────────────────── */
+.value-card h3 { color: #1A1208 !important; -webkit-text-fill-color: #1A1208 !important; }
+.value-card p  { color: #3A2A18 !important; -webkit-text-fill-color: #3A2A18 !important; font-size: .9rem !important; line-height: 1.8 !important; }
+.value-num     { color: rgba(197,165,90,.35) !important; -webkit-text-fill-color: rgba(197,165,90,.35) !important; }
+.values-grid   { gap: 24px !important; background: transparent !important; }
+
+
+/* ── NUMBER CARDS: dark labels on silver glass ────────────────── */
+.number-card .number-l,
+.number-card [class*="-l"],
+.number-card p,
+.number-card span:not(.number-n) { color: #3A2A18 !important; -webkit-text-fill-color: #3A2A18 !important; letter-spacing: .18em; }
+.numbers-grid { gap: 24px !important; background: transparent !important; }
+
+/* ═══════════════════════════════════════════════════════════════
+   END LEATHER THEME
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════════════════════════
+   HORIZONTAL HERO — about.html only
+   To revert: delete everything between these two comments
+   ═══════════════════════════════════════════════════════════════ */
+
+.page-hero { padding: 140px 5% 100px; }
+.page-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.page-hero-left  { display: flex; flex-direction: column; }
+.page-hero-right { display: flex; flex-direction: column; justify-content: center; }
+.page-eyebrow    { margin-bottom: 28px; }
+.page-title      { margin-bottom: 0; }
+.page-sub        { max-width: 100%; font-size: 1.1rem; line-height: 1.85; }
+
+/* Divider between columns */
+.page-hero-right {
+  padding-left: 48px;
+  border-left: 1px solid rgba(197,165,90,.25);
+}
+
+@media (max-width: 860px) {
+  .page-hero-inner {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .page-hero-right {
+    padding-left: 0 !important;
+    border-left: none !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   END HORIZONTAL HERO
+   ═══════════════════════════════════════════════════════════════ */
 </style>
 </head>
 <body>
@@ -442,12 +597,19 @@ footer{
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-inner">
-    <div class="page-eyebrow fade-up">
-      <span class="eyebrow-line"></span>
-      <span class="eyebrow-text">Chi Siamo</span>
+    <!-- HORIZONTAL HERO: left col -->
+    <div class="page-hero-left">
+      <div class="page-eyebrow fade-up">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">Chi Siamo</span>
+      </div>
+      <h1 class="page-title fade-up d1">Non facciamo marketing.<br><em>Costruiamo sistemi.</em></h1>
     </div>
-    <h1 class="page-title fade-up d1">Non facciamo marketing.<br><em>Costruiamo sistemi.</em></h1>
-    <p class="page-sub fade-up d2">Cerroni Solutions nasce da una convinzione semplice: la maggior parte delle attività non ha bisogno di più visibilità — ha bisogno di un sistema che trasformi quella visibilità in clienti reali.</p>
+    <!-- HORIZONTAL HERO: right col -->
+    <div class="page-hero-right fade-up d2">
+      <p class="page-sub">Cerroni Solutions nasce da una convinzione semplice: la maggior parte delle attività non ha bisogno di più visibilità — ha bisogno di un sistema che trasformi quella visibilità in clienti reali.</p>
+    </div>
+    <!-- END HORIZONTAL HERO -->
   </div>
 </div>
 <div class="leather-cord" aria-hidden="true"></div>

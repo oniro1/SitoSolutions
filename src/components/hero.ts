@@ -55,18 +55,18 @@ export function initHero(): void {
 
   const geometry = new THREE.TorusKnotGeometry(1.1, 0.32, 160, 24)
   const material = new THREE.MeshPhysicalMaterial({
-    color: 0xffffff,
-    metalness: 0.18,
-    roughness: 0.08,
-    clearcoat: 1.0,
-    clearcoatRoughness: 0.06,
-    reflectivity: 1.0,
-    transmission: 0.22,
-    thickness: 0.8,
-    envMapIntensity: 1.4,
-    ior: 1.6,
-    sheen: 0.15,
-    sheenColor: new THREE.Color(0xe8f0ff)
+    color: 0xB8712A,
+    metalness: 0.45,
+    roughness: 0.18,
+    clearcoat: 0.8,
+    clearcoatRoughness: 0.12,
+    reflectivity: 0.8,
+    transmission: 0.08,
+    thickness: 0.6,
+    envMapIntensity: 1.2,
+    ior: 1.4,
+    sheen: 0.2,
+    sheenColor: new THREE.Color(0xCD8E42)
   })
 
   const sculpture = new THREE.Mesh(geometry, material)
